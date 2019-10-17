@@ -1,1 +1,11 @@
 @import '~bootstrap/scss/bootstrap';
+
+.success {
+  color: green;
+  font-size: 25px;
+}
+
+.failure {
+  color: red;
+  font-size: 25px;
+}
