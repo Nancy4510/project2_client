@@ -7,6 +7,7 @@
 // require('./example')
 
 const authEvents = require('./auth/events')
+const ticketsEvents = require('./tickets/events')
 
 $(() => {
   // your JS code goes here
@@ -14,4 +15,6 @@ $(() => {
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('click', authEvents.onSignOut)
+  $('#create-ticket').on('submit', ticketsEvents.onCreateTicket)
+  $('#get-tickets').on('click', ticketsEvents.onGetTickets)
 })

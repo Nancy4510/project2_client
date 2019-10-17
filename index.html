@@ -51,6 +51,7 @@
 
   <br>
 
+<!-- Ticket page -->
 <h1>Tickets</h1>
 <p>Please fill out the following form with the following information: the type of computer you have, the model number of your computer, the date you are issuing the ticekt and a brief description of the issue you are having. </p>
 <br>
@@ -62,10 +63,14 @@
 <br>
 <textarea placeholder="Tell us what issue you are experiencing in this box."rows="4" cols="50">
 </textarea>
+<br>
+<form id="create-ticket" action="index.html" method="post">
+<button id="btnNewticket" type="button" name="button">Submit</button>
+</form>
   <br>
   <h1>View All Tickets</h1>
   <br>
-  <button type="button" name="button">View All Tickets</button>
+  <button id="get-tickets" type="button" name="button">View All Tickets</button>
   <br>
   <h1>Update a Ticket</h1>
   <br>
