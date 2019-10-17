@@ -55,34 +55,49 @@
 <h1>Tickets</h1>
 <p>Please fill out the following form with the following information: the type of computer you have, the model number of your computer, the date you are issuing the ticekt and a brief description of the issue you are having. </p>
 <br>
+
+<form id="create-ticket" action="index.html" method="post">
 <input type="date" id="date" name="date" value="yyyy-MM-dd">
 <br>
-<input placeholder="type of pc" type="text">
+<input placeholder="type of pc" type="text" name="tickets[type_of_pc]">
 <br>
-<input placeholder="model number" type="text">
+<input placeholder="model number" type="text" name="tickets[model_number]">
 <br>
 <textarea placeholder="Tell us what issue you are experiencing in this box."rows="4" cols="50">
-</textarea>
+</textarea name="tickets[description]">
 <br>
-<form id="create-ticket" action="index.html" method="post">
 <button id="btnNewticket" type="button" name="button">Submit</button>
 </form>
+
   <br>
+
   <h1>View All Tickets</h1>
+
   <br>
-  <button id="get-tickets" type="button" name="button">View All Tickets</button>
+
+<form id="get-tickets" action="index.html" method="post">
+  <button class="get-tickets" type="button" name="button">View All Tickets</button>
+</form>
+
   <br>
+
   <h1>Update a Ticket</h1>
+
   <br>
+
+  <form id="update-ticket" action="index.html" method="post">
   <input type="date" id="date" name="date" value="yyyy-MM-dd">
   <br>
   <input placeholder="id" type="text">
   <br>
-  <textarea placeholder="Tell us what issue you are experiencing in this box."rows="4" cols="50">
+  <textarea placeholder="Tell us what new issue you are experiencing in this box."rows="4" cols="50" name="tickets[description]">
   </textarea>
   <br>
   <button type="button" name="button">Update a Ticket</button>
+  </form>
+
   <br>
+
   <h1>Remove a Ticket</h1>
   <input placeholder="id" type="text">
   <br>

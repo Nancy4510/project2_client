@@ -23,12 +23,12 @@ const onGetTicketSuccess = function (data) {
 
 const onGetTicketFailure = function () {
   console.log('In onGetTicketFailure')
-  successMessage('Get games failed!')
+  successMessage('Get ticket failed!')
 }
 
 const onCreateTicketSuccess = function (data) {
   store.ticket = data.ticket
-  // console.log(store)
+  console.log(store)
   successMessage('Created ticket successfully!')
 }
 

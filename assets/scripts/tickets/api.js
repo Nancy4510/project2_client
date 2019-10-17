@@ -37,7 +37,7 @@ const updateTicket = function (data) {
 }
 
 const showTicket = function (data) {
-  // console.log('game shown')
+  // console.log('ticket shown')
   return $.ajax({
     url: config.apiUrl + '/tickets/' + data.ticket.id,
     method: 'GET'

@@ -16,5 +16,6 @@ $(() => {
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('click', authEvents.onSignOut)
   $('#create-ticket').on('submit', ticketsEvents.onCreateTicket)
-  $('#get-tickets').on('click', ticketsEvents.onGetTickets)
+  $('#get-tickets').on('submit', ticketsEvents.onGetTickets)
+  $('#update-ticket').on('submit', ticketsEvents.onUpdateTicket)
 })

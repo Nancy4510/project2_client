@@ -13,6 +13,7 @@ const onGetTickets = function () {
 }
 
 const onCreateTicket = function (data) {
+  console.log('In onCreateeTicket')
   event.preventDefault()
   api.createTicket(data)
     .then(ui.onCreateTicketSuccess)
