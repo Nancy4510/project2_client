@@ -1,6 +1,7 @@
 'use strict'
 
 const store = require('../store')
+const config = require('./../config')
 
 const successMessage = function (newText) {
   $('#message').text(newText)
@@ -16,9 +17,12 @@ const failureMessage = function (newText) {
 }
 
 const onGetTicketSuccess = function (data) {
-  console.log('In onGetTicketSuccess')
+  config.ticket = data.ticket
+  console.log(config)
+  // console.log('In onGetTicketSuccess')
   // console.log(data.games.length)
   successMessage('Get tickets success')
+  // $('#message').html('Here are your tickets: ' + data.tickets.length)
 }
 
 const onGetTicketFailure = function () {
