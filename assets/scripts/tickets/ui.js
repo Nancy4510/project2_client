@@ -53,11 +53,24 @@ const onUpdateTicketFailure = function (responseData) {
   failureMessage('Update ticket failed')
 }
 
+const onDeleteTicketSuccess = function (responseData) {
+  store.ticket = responseData.ticket
+  // console.log(store)
+  successMessage('Deleted ticket successfully!')
+}
+
+const onDeleteTicketFailure = function (responseData) {
+  store.ticket = responseData.ticket
+  failureMessage('Delete ticket failed')
+}
+
 module.exports = {
   onGetTicketSuccess,
   onGetTicketFailure,
   onCreateTicketSuccess,
   onCreateTicketFailure,
   onUpdateTicketSuccess,
-  onUpdateTicketFailure
+  onUpdateTicketFailure,
+  onDeleteTicketSuccess,
+  onDeleteTicketFailure
 }

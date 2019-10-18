@@ -43,10 +43,17 @@ const showTicket = function (data) {
     method: 'GET'
   })
 }
+const deleteTicket = function (formData) {
+  return $.ajax({
+    url: config.apiUrl + '/tickets/' + formData.ticket.id,
+    method: 'DELETE'
+  })
+}
 
 module.exports = {
   getTicket,
   createTicket,
   updateTicket,
-  showTicket
+  showTicket,
+  deleteTicket
 }

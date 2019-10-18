@@ -22,16 +22,27 @@ const onCreateTicket = function (event) {
     .catch(ui.onCreateTicketFailure)
 }
 
-const onUpdateTicket = function (responseData) {
+const onUpdateTicket = function (event) {
   console.log('In onUpdateTicket')
+  const form = event.target
   event.preventDefault()
-  api.updateTicket(responseData)
+  const data = getFormFields(form)
+  api.updateTicket(data)
     .then(ui.onUpdateTicketSuccess)
     .catch(ui.onUpdateTicketFailure)
+}
+
+const onDeleteTicket = function (event) {
+  event.preventDefault()
+  const formData = getFormFields(event.target)
+  api.deleteTicket(formData)
+    .then(ui.onDeleteTicketSuccess)
+    .catch(ui.onDeleteTicketFailure)
 }
 
 module.exports = {
   onGetTickets,
   onCreateTicket,
-  onUpdateTicket
+  onUpdateTicket,
+  onDeleteTicket
 }
