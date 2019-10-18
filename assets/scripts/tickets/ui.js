@@ -22,7 +22,7 @@ const onGetTicketSuccess = function (data) {
   // console.log('In onGetTicketSuccess')
   // console.log(data.games.length)
   successMessage('Get tickets success')
-  // $('#message').html('Here are your tickets: ' + data.tickets.length)
+  $('#message').html('Here are your tickets: ' + config.tickets)
 }
 
 const onGetTicketFailure = function () {
