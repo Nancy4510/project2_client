@@ -35,7 +35,7 @@ const onGetTicketSuccess = function (data) {
 }
 // console.log('In onGetTicketSuccess')
 // console.log(data.games.length)
-successMessage('Get tickets success')
+// successMessage('Get tickets success')
 
 const onGetTicketFailure = function () {
   console.log('In onGetTicketFailure')

@@ -27,28 +27,32 @@ const createTicket = function (data) {
   })
 }
 
-const updateTicket = function (data) {
+const updateTicket = function (formData) {
   console.log('ticket updated')
   return $.ajax({
-    url: config.apiUrl + '/tickets/' + data.ticket.id,
+    url: config.apiUrl + '/tickets/' + formData.ticket.id,
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
     method: 'PATCH', // --> to update
-    data: data
+    data: formData
   })
 }
 
-const showTicket = function (data) {
+const showTicket = function (formData) {
   // console.log('ticket shown')
   return $.ajax({
-    url: config.apiUrl + '/tickets/' + data.ticket.id,
+    url: config.apiUrl + '/tickets/' + formData.ticket.id,
     method: 'GET'
   })
 }
+
 const deleteTicket = function (formData) {
   return $.ajax({
     url: config.apiUrl + '/tickets/' + formData.ticket.id,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
     method: 'DELETE'
   })
 }

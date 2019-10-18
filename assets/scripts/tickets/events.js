@@ -2,7 +2,7 @@
 const getFormFields = require('../../../lib/get-form-fields.js')
 const api = require('./api')
 const ui = require('./ui')
-const store = require('../store')
+// const store = require('../store')
 
 const onGetTickets = function () {
   console.log('In onGetTickets')
@@ -23,11 +23,11 @@ const onCreateTicket = function (event) {
 }
 
 const onUpdateTicket = function (event) {
-  console.log('In onUpdateTicket')
-  const form = event.target
+  // console.log('In onUpdateTicket')
+  // const form = event.target
   event.preventDefault()
-  const data = getFormFields(form)
-  api.updateTicket(data)
+  const formData = getFormFields(event.target)
+  api.updateTicket(formData)
     .then(ui.onUpdateTicketSuccess)
     .catch(ui.onUpdateTicketFailure)
 }
