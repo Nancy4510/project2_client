@@ -5,7 +5,6 @@ const ui = require('./ui')
 // const store = require('../store')
 
 const onGetTickets = function () {
-  console.log('In onGetTickets')
   event.preventDefault()
   api.getTicket()
     .then(ui.onGetTicketSuccess)
@@ -13,7 +12,6 @@ const onGetTickets = function () {
 }
 
 const onCreateTicket = function (event) {
-  // console.log('In onCreateTicket')
   const form = event.target
   event.preventDefault()
   const data = getFormFields(form)

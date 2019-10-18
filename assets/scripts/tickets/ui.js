@@ -1,7 +1,7 @@
 'use strict'
 
 const store = require('../store')
-const config = require('./../config')
+// const config = require('./../config')
 
 const successMessage = function (newText) {
   $('#message').text(newText)
@@ -38,13 +38,12 @@ const onGetTicketSuccess = function (data) {
 // successMessage('Get tickets success')
 
 const onGetTicketFailure = function () {
-  console.log('In onGetTicketFailure')
+  // console.log('In onGetTicketFailure')
   successMessage('Get ticket failed!')
 }
 
 const onCreateTicketSuccess = function (data) {
   store.ticket = data.ticket
-  // console.log(store)
   successMessage('Created ticket successfully!')
   $('form').trigger('reset')
 }
@@ -59,7 +58,7 @@ const onUpdateTicketSuccess = function (responseData) {
   store.ticket = responseData.ticket
   // console.log(store)
   $('#ticket-display').html('Your ticket has been updated! Click "View All Tickets" again to see what has changed')
-  // successMessage('Updated ticket successfully!')
+  successMessage('Updated ticket successfully!')
   $('form').trigger('reset')
 }
 

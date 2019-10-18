@@ -16,7 +16,7 @@ const failureMessage = function (newText) {
 
 const onSignUpSuccess = function () {
   successMessage('You signed up successfully! Now you can sign in!')
-  $('.signUp').show()
+  // $('.signUp').show()
   $('form').trigger('reset')
 }
 
