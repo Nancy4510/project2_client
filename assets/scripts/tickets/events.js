@@ -13,7 +13,7 @@ const onGetTickets = function () {
 }
 
 const onCreateTicket = function (event) {
-  console.log('In onCreateeTicket')
+  // console.log('In onCreateTicket')
   const form = event.target
   event.preventDefault()
   const data = getFormFields(form)
@@ -23,8 +23,6 @@ const onCreateTicket = function (event) {
 }
 
 const onUpdateTicket = function (event) {
-  // console.log('In onUpdateTicket')
-  // const form = event.target
   event.preventDefault()
   const formData = getFormFields(event.target)
   api.updateTicket(formData)

@@ -95,7 +95,7 @@
   <form id="update-ticket">
   <input placeholder="date" type="text" name="ticket[date]">
   <br>
-  <input placeholder="id" type="text">
+  <input placeholder="id" type="text" name=ticket[id]>
   <br>
   <textarea placeholder="Tell us what new issue you are experiencing in this box." rows="4" cols="50" name="ticket[description]">
 </textarea>
@@ -107,7 +107,7 @@
 
   <h1>Remove a Ticket</h1>
   <form id="delete-ticket">
-    <input placeholder="id" type="text">
+    <input placeholder="id" type="text" name=ticket[id]>
     <br>
     <button id="removeTicket">Remove a Ticket</button>
   </form>

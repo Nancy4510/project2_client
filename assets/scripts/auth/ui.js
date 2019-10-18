@@ -38,6 +38,7 @@ const onSignInFailure = function () {
 const onChangePasswordSuccess = function () {
   successMessage('changed password successfully!')
   $('.changePassword').hide()
+  $('form').trigger('reset')
 }
 
 const onChangePasswordFailure = function () {

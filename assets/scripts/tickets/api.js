@@ -39,21 +39,23 @@ const updateTicket = function (formData) {
   })
 }
 
-const showTicket = function (formData) {
-  // console.log('ticket shown')
-  return $.ajax({
-    url: config.apiUrl + '/tickets/' + formData.ticket.id,
-    method: 'GET'
-  })
-}
+// const showTicket = function (formData) {
+//   // console.log('ticket shown')
+//   return $.ajax({
+//     url: config.apiUrl + '/tickets/' + formData.ticket.id,
+//     method: 'GET'
+//   })
+// }
 
 const deleteTicket = function (formData) {
+  console.log('ticket deleted')
   return $.ajax({
     url: config.apiUrl + '/tickets/' + formData.ticket.id,
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    method: 'DELETE'
+    method: 'DELETE',
+    data: formData
   })
 }
 
@@ -61,6 +63,6 @@ module.exports = {
   getTicket,
   createTicket,
   updateTicket,
-  showTicket,
+  // showTicket,
   deleteTicket
 }

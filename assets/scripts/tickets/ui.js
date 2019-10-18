@@ -3,7 +3,7 @@
 const store = require('../store')
 const config = require('./../config')
 
-const successMessage = function(newText) {
+const successMessage = function (newText) {
   $('#message').text(newText)
   $('#message').removeClass('failure')
   $('#message').addClass('success')
@@ -44,8 +44,9 @@ const onGetTicketFailure = function () {
 
 const onCreateTicketSuccess = function (data) {
   store.ticket = data.ticket
-  console.log(store)
+  // console.log(store)
   successMessage('Created ticket successfully!')
+  $('form').trigger('reset')
 }
 
 const onCreateTicketFailure = function (data) {
@@ -57,22 +58,24 @@ const onCreateTicketFailure = function (data) {
 const onUpdateTicketSuccess = function (responseData) {
   store.ticket = responseData.ticket
   // console.log(store)
-  successMessage('Updated ticket successfully!')
+  $('#ticket-display').html('Your ticket has been updated! Click "View All Tickets" again to see what has changed')
+  // successMessage('Updated ticket successfully!')
+  $('form').trigger('reset')
 }
 
-const onUpdateTicketFailure = function (responseData) {
-  store.ticket = responseData.ticket
+const onUpdateTicketFailure = function (responsedata) {
+  store.ticket = responsedata.ticket
   failureMessage('Update ticket failed')
 }
 
-const onDeleteTicketSuccess = function (responsedata) {
-  store.ticket = responsedata.ticket
-  // console.log(store)
+const onDeleteTicketSuccess = function () {
+  store.ticket = null
+  $('#ticket-display').html("Your ticket has been deleted! Click 'View All Tickets' again to see tham all again")
   successMessage('Deleted ticket successfully!')
+  $('#delete-ticket').trigger('reset')
 }
 
-const onDeleteTicketFailure = function (responsedata) {
-  store.ticket = responsedata.ticket
+const onDeleteTicketFailure = function () {
   failureMessage('Delete ticket failed')
 }
 
