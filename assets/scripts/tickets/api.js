@@ -31,6 +31,9 @@ const updateTicket = function (data) {
   console.log('ticket updated')
   return $.ajax({
     url: config.apiUrl + '/tickets/' + data.ticket.id,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
     method: 'PATCH', // --> to update
     data: data
   })

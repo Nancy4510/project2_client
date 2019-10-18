@@ -3,7 +3,7 @@
 const store = require('../store')
 const config = require('./../config')
 
-const successMessage = function (newText) {
+const successMessage = function(newText) {
   $('#message').text(newText)
   $('#message').removeClass('failure')
   $('#message').addClass('success')
@@ -17,13 +17,25 @@ const failureMessage = function (newText) {
 }
 
 const onGetTicketSuccess = function (data) {
-  config.ticket = data.ticket
-  console.log(config)
-  // console.log('In onGetTicketSuccess')
-  // console.log(data.games.length)
-  successMessage('Get tickets success')
-  $('#message').html('Here are your tickets: ' + config.tickets)
+  // config.ticket = data.ticket
+  console.log(data)
+  $('#ticket-display').html('')
+
+  data.tickets.forEach(ticket => {
+    const bookHTML = (`
+        <h4>Date: ${ticket.date}</h4>
+        <p>Type of Pc: ${ticket.type_of_pc}</p>
+        <p>Model Number: ${ticket.model_number}<p>
+        <p>Description: ${ticket.description}<p>
+        <p>ID: ${ticket.id}</p>
+        <br>
+      `)
+    $('#ticket-display').append(bookHTML)
+  })
 }
+// console.log('In onGetTicketSuccess')
+// console.log(data.games.length)
+successMessage('Get tickets success')
 
 const onGetTicketFailure = function () {
   console.log('In onGetTicketFailure')
@@ -53,14 +65,14 @@ const onUpdateTicketFailure = function (responseData) {
   failureMessage('Update ticket failed')
 }
 
-const onDeleteTicketSuccess = function (responseData) {
-  store.ticket = responseData.ticket
+const onDeleteTicketSuccess = function (responsedata) {
+  store.ticket = responsedata.ticket
   // console.log(store)
   successMessage('Deleted ticket successfully!')
 }
 
-const onDeleteTicketFailure = function (responseData) {
-  store.ticket = responseData.ticket
+const onDeleteTicketFailure = function (responsedata) {
+  store.ticket = responsedata.ticket
   failureMessage('Delete ticket failed')
 }
 
