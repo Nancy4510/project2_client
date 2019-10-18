@@ -1,5 +1,5 @@
 'use strict'
-// const getformFields = require('../../../lib/get-form-fields.js')
+const getFormFields = require('../../../lib/get-form-fields.js')
 const api = require('./api')
 const ui = require('./ui')
 const store = require('../store')
@@ -12,9 +12,11 @@ const onGetTickets = function () {
     .catch(ui.onGetTicketFailure)
 }
 
-const onCreateTicket = function (data) {
+const onCreateTicket = function (event) {
   console.log('In onCreateeTicket')
+  const form = event.target
   event.preventDefault()
+  const data = getFormFields(form)
   api.createTicket(data)
     .then(ui.onCreateTicketSuccess)
     .catch(ui.onCreateTicketFailure)
