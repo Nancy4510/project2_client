@@ -18,11 +18,11 @@ const failureMessage = function (newText) {
 
 const onGetTicketSuccess = function (data) {
   // config.ticket = data.ticket
-  console.log(data)
+  // console.log(data)
   $('#ticket-display').html('')
 
   data.tickets.forEach(ticket => {
-    const bookHTML = (`
+    const ticketHTML = (`
         <h4>Date: ${ticket.date}</h4>
         <p>Type of Pc: ${ticket.type_of_pc}</p>
         <p>Model Number: ${ticket.model_number}<p>
@@ -30,7 +30,7 @@ const onGetTicketSuccess = function (data) {
         <p>ID: ${ticket.id}</p>
         <br>
       `)
-    $('#ticket-display').append(bookHTML)
+    $('#ticket-display').append(ticketHTML)
   })
 }
 // console.log('In onGetTicketSuccess')

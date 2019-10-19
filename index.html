@@ -14,9 +14,11 @@
 </head>
 
 <body>
+  <main>
   <!-- login page -->
   <h1>Tech Support</h1>
   <p id="message"></p>
+  <div class="signIn">
   <h2>Sign-In</h2>
   <form id="sign-in">
     <input placeholder="Enter Email" type="email" name="credentials[email]">
@@ -25,10 +27,11 @@
     <br>
     <button id='btnSignIn'>Sign In</button>
   </form>
-
+</div>
   <br>
 
-  <h2>Sign-Up</h2>
+<div class="signUp">
+<h2>Sign Up</h2>
   <form id="sign-up">
     <input placeholder="Enter Email" type="email" name="credentials[email]">
     <br>
@@ -38,21 +41,11 @@
     <br>
     <button>Sign Up</button>
   </form>
+</div>
 
   <br>
 
-  <h2>Change Password</h2>
-  <form id="change-password">
-    <input placeholder="Enter Old Password" type="password" name="passwords[old]">
-    <br>
-    <input placeholder="Enter New Password" type="password" name="passwords[new]">
-    <br>
-    <button id="btnChangePassword">Change Password</button>
-  </form>
-  </div>
-
-  <br>
-
+<section class="ticketPage">
   <!-- Ticket page -->
   <h1>Tickets</h1>
   <p>Please fill out the following form with the following information: the type of computer you have, the model number of your computer, the date you are issuing the ticekt and a brief description of the issue you are having. </p>
@@ -85,7 +78,7 @@
 </form>
 <section>
 <div id="ticket-display"></div>
-</section>
+
   <br>
 
   <h1>Update a Ticket</h1>
@@ -114,13 +107,24 @@
 
   <br>
 
+  <div class="changePassword">
+    <h2>Change Password</h2>
+    <form id="change-password">
+      <input placeholder="Enter Old Password" type="password" name="passwords[old]">
+      <br>
+      <input placeholder="Enter New Password" type="password" name="passwords[new]">
+      <br>
+      <button id="btnChangePassword">Change Password</button>
+    </form>
+    </div>
+
   <form id="sign-out">
     <button id='btnSignOut'>Sign Out</button>
   </form>
-
+</section>
   <footer>
     &copy; 2019
   </footer>
+</main>
 </body>
-
 </html>

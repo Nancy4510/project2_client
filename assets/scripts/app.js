@@ -19,4 +19,5 @@ $(() => {
   $('#get-tickets').on('submit', ticketsEvents.onGetTickets)
   $('#update-ticket').on('submit', ticketsEvents.onUpdateTicket)
   $('#delete-ticket').on('submit', ticketsEvents.onDeleteTicket)
+  $('.ticketPage').hide()
 })

@@ -1,5 +1,10 @@
 @import '~bootstrap/scss/bootstrap';
 
+main {
+  padding-top: 50px;
+  text-align: center;
+}
+
 .success {
   color: green;
   font-size: 25px;

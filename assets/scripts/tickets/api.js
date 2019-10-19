@@ -5,7 +5,7 @@ const store = require('../store')
 
 const getTicket = function () {
   // make GET request to /tickets
-  console.log('in getTicket')
+  // console.log('in getTicket')
   return $.ajax({
     url: config.apiUrl + '/tickets/',
     headers: {
@@ -16,7 +16,7 @@ const getTicket = function () {
 }
 
 const createTicket = function (data) {
-  console.log('new ticket created')
+  // console.log('new ticket created')
   return $.ajax({
     method: 'POST',
     url: config.apiUrl + '/tickets/',
@@ -28,7 +28,7 @@ const createTicket = function (data) {
 }
 
 const updateTicket = function (formData) {
-  console.log('ticket updated')
+  // console.log('ticket updated')
   return $.ajax({
     url: config.apiUrl + '/tickets/' + formData.ticket.id,
     headers: {
@@ -48,7 +48,7 @@ const updateTicket = function (formData) {
 // }
 
 const deleteTicket = function (formData) {
-  console.log('ticket deleted')
+  // console.log('ticket deleted')
   return $.ajax({
     url: config.apiUrl + '/tickets/' + formData.ticket.id,
     headers: {
