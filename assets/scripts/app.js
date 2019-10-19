@@ -20,4 +20,13 @@ $(() => {
   $('#update-ticket').on('submit', ticketsEvents.onUpdateTicket)
   $('#delete-ticket').on('submit', ticketsEvents.onDeleteTicket)
   $('.ticketPage').hide()
+
+  $('#btnSignIn').on('click', function (event) {
+    $('.ticketPage').show()
+    $('.changePassword').show()
+    $('.signOut').show()
+    $('.signIn').hide()
+    $('.signUp').hide()
+    // $('#title').hide()
+  })
 })
