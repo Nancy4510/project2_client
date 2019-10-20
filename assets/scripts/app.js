@@ -27,6 +27,13 @@ $(() => {
     $('.signOut').show()
     $('.signIn').hide()
     $('.signUp').hide()
-    // $('#title').hide()
+
+    $('#btnSignOut').on('click', function (event) {
+      $('.ticketPage').hide()
+      $('.changePassword').hide()
+      $('.signOut').hide()
+      $('.signUp').show()
+      $('.signIn').show()
+    })
   })
 })
