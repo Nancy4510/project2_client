@@ -3,9 +3,69 @@
   box-sizing: content-box;
 }
 
+// .container {
+//   width: 2000px;
+// }
+
 main {
-  padding-top: 50px;
+  // padding-top: 50px;
   text-align: center;
+  overflow: hidden;
+}
+
+.sign_in_div{
+  background: black;
+  height: 95px;
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+#sign-in {
+  display:flex;
+  justify-content: flex-end;
+  // justify-content: space-around;
+  margin-bottom: 500%;
+}
+
+.form-control{
+  height: 25px;
+  margin-right: 20px;
+  width: 150px;
+}
+
+#enter-password{
+  margin-right: 30px;
+}
+
+#btnSignIn {
+  border-radius: 10px;
+  height: 25px;
+  margin-top: 25px;
+  margin-left: -20px;
+  margin-right: 20px;
+  width: 100px;
+}
+
+#sign-up {
+  margin-left: 495px;
+}
+
+#sign-up-input {
+  margin-bottom: -15px;
+}
+
+#btnSignUp {
+  margin-right: 480px;
+}
+
+footer {
+  background-color: black;
+  bottom: 0;
+  color: white;
+  height: 75px;
+  position: absolute;
+  width: 90%;
+
 }
 
 .success {
