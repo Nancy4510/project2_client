@@ -1,71 +1,148 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Dosis:400,500,600,700|Quicksand:400,500,600,700&display=swap');
+
 * {
   box-sizing: content-box;
 }
 
-// .container {
-//   width: 2000px;
-// }
-
-main {
-  // padding-top: 50px;
-  text-align: center;
+body {
+  font-family: 'Quicksand', sans-serif;
   overflow: hidden;
 }
 
-.sign_in_div{
-  background: black;
+main {
+  background-image: url("https://res.cloudinary.com/dyiugkn4y/image/upload/v1571671166/GA%20Pix/SEI/background-image1.jpg");
+  background-size: cover;
+  text-align: center;
+}
+
+.sign_in_div {
   height: 95px;
   margin-bottom: 60px;
   width: 100%;
 }
 
-#sign-in {
-  display:flex;
-  justify-content: flex-end;
-  // justify-content: space-around;
-  margin-bottom: 500%;
+h1 {
+  font-weight: 600;
+  font-size: 45px;
+  margin-right: 500px;
+  margin-top: 15px;
+  padding-right: 100px;
 }
 
-.form-control{
+// SIGN IN FORM
+#sign-in {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 500%;
+  margin-right: -90px;
+}
+
+#icon-mail{
+  margin-left: -400px;
+  margin-top: 30px;
+  padding-right: 10px;
+}
+
+#icon-lock {
+  margin-top: 30px;
+  padding-right: 10px;
+}
+
+.form-control {
+  background-color: Transparent;
+  border: none;
+  border-bottom: 1px solid black;
+  border-radius: 0;
   height: 25px;
   margin-right: 20px;
   width: 150px;
 }
 
-#enter-password{
+#enter-password-input {
   margin-right: 30px;
 }
 
 #btnSignIn {
-  border-radius: 10px;
+  background-color: Transparent;
+  border-radius: 5px;
+  color: black;
   height: 25px;
   margin-top: 25px;
   margin-left: -20px;
-  margin-right: 20px;
+  margin-right: -30px;
   width: 100px;
 }
 
+#btnSignIn:hover {
+  background-color: #343a40;
+  color: white;
+}
+
+.sign_up_div {
+  // border: 2px dotted black;
+  height: 400px;
+  text-align: center;
+  width: 500px;
+  margin-top: 100px;
+  margin-left: 300px;
+}
+
+.sign-up-header {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+// SIGN UP FORM
 #sign-up {
-  margin-left: 495px;
+  margin-top: 20px;
+  margin-left: 170px;
+}
+
+#icon-mail-for-signup {
+  margin-right: 300px;
+}
+
+#icon-lock-for-signup {
+  margin-right: 300px;
+  padding-bottom: 50px;
 }
 
 #sign-up-input {
   margin-bottom: -15px;
+  margin-left: 50px;
+  margin-top: -40px;
+}
+
+#sign-up-input-password {
+  margin-bottom: -15px;
+  margin-left: 50px;
+  margin-top: -50px;
+}
+
+#sign-up-input-confirm-password {
+  margin-bottom: -15px;
+  margin-left: 50px;
+  margin-top: -60px;
+  // padding-bottom: 30px;
 }
 
 #btnSignUp {
-  margin-right: 480px;
+  background-color: Transparent;
+  color: black;
+  margin-bottom: -60px;
+  margin-right: 170px;
+}
+
+#btnSignUp:hover {
+  background-color: #343a40;
+  color: white;
 }
 
 footer {
-  background-color: black;
-  bottom: 0;
-  color: white;
-  height: 75px;
-  position: absolute;
-  width: 90%;
-
+  font-size: 20px;
+  height: 100px;
+  margin-top: 50px;
 }
 
 .success {
