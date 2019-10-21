@@ -22,11 +22,11 @@ $(() => {
   $('.ticketPage').hide()
 
   $('#btnSignIn').on('click', function (event) {
+    $('.sign_in_div').hide()
+    $('.sign_up_div').hide()
     $('.ticketPage').show()
     $('.changePassword').show()
     $('.signOut').show()
-    $('#sign-in').hide()
-    $('.signUp').hide()
 
     $('#btnSignOut').on('click', function (event) {
       $('.ticketPage').hide()

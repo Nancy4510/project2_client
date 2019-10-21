@@ -3,12 +3,17 @@
 
 * {
   box-sizing: content-box;
+  // overflow: scroll;
 }
 
 body {
   font-family: 'Quicksand', sans-serif;
-  overflow: hidden;
 }
+
+// .container {
+//   height: 400%;
+//   width: 900px;
+// }
 
 main {
   background-image: url("https://res.cloudinary.com/dyiugkn4y/image/upload/v1571671166/GA%20Pix/SEI/background-image1.jpg");
@@ -16,27 +21,34 @@ main {
   text-align: center;
 }
 
+.login-in-page {
+  overflow: hidden;
+}
+
 .sign_in_div {
-  height: 95px;
-  margin-bottom: 60px;
+  height: 100px;
+  // margin-bottom: 60px;
   width: 100%;
 }
 
 h1 {
   font-weight: 600;
-  font-size: 45px;
-  margin-right: 500px;
+  font-size: 35px;
+  margin-right: 600px;
   margin-top: 15px;
-  padding-right: 100px;
+  text-align: right;
+  // padding-left: 10px;
 }
 
 // SIGN IN FORM
 #sign-in {
+  align-items: center;
   display: flex;
   justify-content: flex-end;
   margin-bottom: 500%;
-  margin-right: -90px;
+  margin-right: 10px;
 }
+
 
 #icon-mail{
   margin-left: -400px;
@@ -56,6 +68,7 @@ h1 {
   border-radius: 0;
   height: 25px;
   margin-right: 20px;
+  outline: none;
   width: 150px;
 }
 
@@ -80,7 +93,6 @@ h1 {
 }
 
 .sign_up_div {
-  // border: 2px dotted black;
   height: 400px;
   text-align: center;
   width: 500px;
@@ -90,7 +102,7 @@ h1 {
 
 .sign-up-header {
   margin-top: 30px;
-  margin-left: 20px;
+  margin-left: 95px;
 }
 
 // SIGN UP FORM
@@ -99,39 +111,33 @@ h1 {
   margin-left: 170px;
 }
 
-#icon-mail-for-signup {
-  margin-right: 300px;
-}
-
-#icon-lock-for-signup {
-  margin-right: 300px;
-  padding-bottom: 50px;
-}
-
-#sign-up-input {
-  margin-bottom: -15px;
-  margin-left: 50px;
-  margin-top: -40px;
-}
-
-#sign-up-input-password {
-  margin-bottom: -15px;
-  margin-left: 50px;
+.form-group-passwords {
   margin-top: -50px;
 }
 
-#sign-up-input-confirm-password {
-  margin-bottom: -15px;
-  margin-left: 50px;
-  margin-top: -60px;
-  // padding-bottom: 30px;
+#icon-mail-for-signup {
+  margin-right: 300px;
+  margin-bottom: -110px;
+}
+
+#icon-lock-for-signup {
+  margin: 0px 500px -50px 0px;
+}
+
+#icon-lock-for-signup2 {
+  margin: 0px 500px -200px 0px;
+}
+
+.input-field {
+  margin: auto;
+  margin: 0px 0px 10px 50px;
 }
 
 #btnSignUp {
   background-color: Transparent;
   color: black;
-  margin-bottom: -60px;
-  margin-right: 170px;
+  margin-bottom: -80px;
+  margin-right: 50px;
 }
 
 #btnSignUp:hover {
