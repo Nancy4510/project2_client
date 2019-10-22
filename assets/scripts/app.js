@@ -28,12 +28,13 @@ $(() => {
     $('.ticketPage').show()
     $('.change_password_div').show()
     $('.signOut').show()
+    $('.main-header').show()
 
     $('#btn-sign-out').on('click', function (event) {
       $('.sign_in_div').show()
       $('.sign_up_div').show()
       $('.ticketPage').hide()
-      $('.changePassword').hide()
+      $('.change_password_div').hide()
       $('.signOut').hide()
     })
   })
