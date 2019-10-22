@@ -19,18 +19,17 @@ const failureMessage = function (newText) {
 const onGetTicketSuccess = function (data) {
   // config.ticket = data.ticket
   // console.log(data)
-  $('#ticket-display').html('')
-
+  $('.modal').html('')
   data.tickets.forEach(ticket => {
     const ticketHTML = (`
-        <h4>Date: ${ticket.date}</h4>
-        <p>Type of Pc: ${ticket.type_of_pc}</p>
-        <p>Model Number: ${ticket.model_number}<p>
-        <p>Description: ${ticket.description}<p>
-        <p>ID: ${ticket.id}</p>
-        <br>
-      `)
-    $('#ticket-display').append(ticketHTML)
+          <h4>Date: ${ticket.date}</h4>
+          <p>Type of Pc: ${ticket.type_of_pc}</p>
+          <p>Model Number: ${ticket.model_number}<p>
+          <p>Description: ${ticket.description}<p>
+          <p>ID: ${ticket.id}</p>
+          <br>
+        `)
+    $('.modal').append(ticketHTML)
   })
 }
 // console.log('In onGetTicketSuccess')
@@ -41,7 +40,6 @@ const onGetTicketFailure = function () {
   // console.log('In onGetTicketFailure')
   successMessage('Get ticket failed!')
 }
-
 const onCreateTicketSuccess = function (data) {
   store.ticket = data.ticket
   successMessage('Created ticket successfully!')

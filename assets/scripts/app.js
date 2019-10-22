@@ -20,7 +20,7 @@ $(() => {
   $('#get-tickets').on('submit', ticketsEvents.onGetTickets)
   $('#update-ticket').on('submit', ticketsEvents.onUpdateTicket)
   $('#delete-ticket').on('submit', ticketsEvents.onDeleteTicket)
-  $('.ticketPage').hide()
+  $('.ticketPage').show()
 
   $('#btnSignIn').on('click', function (event) {
     $('.sign_in_div').hide()
@@ -28,7 +28,6 @@ $(() => {
     $('.ticketPage').show()
     $('.change_password_div').show()
     $('.signOut').show()
-    $('.main-header').show()
 
     $('#btn-sign-out').on('click', function (event) {
       $('.sign_in_div').show()

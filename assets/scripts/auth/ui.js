@@ -47,7 +47,6 @@ const onChangePasswordFailure = function () {
 
 const onSignOutSuccess = function () {
   successMessage('Signed Out Successfully!')
-  // $('.signOut').hide()
   $('form').trigger('reset')
 }
 
