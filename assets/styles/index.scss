@@ -80,8 +80,15 @@ h1 {
   width: 150px;
 }
 
+#enter-email-input {
+  background-color: Transparent;
+  outline: none;
+}
+
 #enter-password-input {
+  background-color: Transparent;
   margin-right: 30px;
+  outline: none;
 }
 
 #btnSignIn {
@@ -122,6 +129,18 @@ h1 {
 
 .form-group-passwords {
   margin-top: -50px;
+}
+
+#sign-up-input {
+  background-color: Transparent;
+}
+
+#sign-up-input-password {
+  background-color: Transparent;
+}
+
+#sign-up-input-confirm-password {
+  background-color: Transparent;
 }
 
 #icon-mail-for-signup {
@@ -310,6 +329,14 @@ span {
 #change-password {
   margin-top: 20px;
   margin-left: 170px;
+}
+
+#old-pw-input {
+  background-color: Transparent;
+}
+
+#new-pw-input {
+  background-color: Transparent;
 }
 
 #icon-lock-op {

@@ -55,7 +55,7 @@ const onCreateTicketFailure = function (data) {
 const onUpdateTicketSuccess = function (responseData) {
   store.ticket = responseData.ticket
   // console.log(store)
-  $('#ticket-display').html('Your ticket has been updated! Click "View All Tickets" again to see what has changed')
+  $('#ticket-display').html('Your ticket has been updated! Click "View All Tickets" to see the updated changes.')
   successMessage('Updated ticket successfully!')
   $('form').trigger('reset')
 }
@@ -67,7 +67,7 @@ const onUpdateTicketFailure = function (responsedata) {
 
 const onDeleteTicketSuccess = function () {
   store.ticket = null
-  $('#ticket-display').html("Your ticket has been deleted! Click 'View All Tickets' again to see tham all again")
+  $('#ticket-display').html("Your ticket has been deleted! Click 'View All Tickets' to see the remaing ticket(s).")
   successMessage('Deleted ticket successfully!')
   $('#delete-ticket').trigger('reset')
 }
