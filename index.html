@@ -17,155 +17,176 @@
 <body>
   <main>
     <div class="container">
-        <!-- LOGIN PAGE -->
-        <div class="login-in-page">
-          <!-- SIGN IN -->
-          <div class="sign_in_div">
-            <form id="sign-in">
-              <h1>Help Desk Support</h1>
-              <!-- <p id="subheading">Let us help you!</p> -->
-              <svg id="icon-mail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                <path d="M2 26 L30 26 30 6 2 6 Z M2 6 L16 16 30 6" />
-              </svg>
-
-              <div class="form-group">
-                <label for="Email"></label>
-                <input class="form-control" placeholder="Email" type="email" name="credentials[email]">
-              </div>
-
-              <svg id="icon-lock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                <path d="M5 15 L5 30 27 30 27 15 Z M9 15 C9 9 9 5 16 5 23 5 23 9 23 15 M16 20 L16 23" />
-                <circle cx="16" cy="24" r="1" />
-              </svg>
-
-              <div class="form-group">
-                <label for="password"></label>
-                <input id='enter-password-input' class="form-control" placeholder="Password" type="password" name="credentials[password]">
-              </div>
-
-              <button id='btnSignIn' class="btn btn-dark">Sign In</button>
-            </form>
-          </div>
-
-          <p id="message"></p>
-
-          <!-- SIGN UP -->
-          <div class="sign_up_div">
-            <h2 class="sign-up-header">Sign Up</h2>
-            <form id="sign-up">
-              <svg id="icon-mail-for-signup" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                <path d="M2 26 L30 26 30 6 2 6 Z M2 6 L16 16 30 6" />
-              </svg>
-              <div class="form-group">
-                <label for="Enter email"></label>
-                <input id="sign-up-input" class="form-control input-field" placeholder="Email" type="email" name="credentials[email]">
-              </div>
-              <svg id="icon-lock-for-signup" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                <path d="M5 15 L5 30 27 30 27 15 Z M9 15 C9 9 9 5 16 5 23 5 23 9 23 15 M16 20 L16 23" />
-                <circle cx="16" cy="24" r="1" />
-              </svg>
-              <div class="form-group-passwords">
-                <label for="password"></label>
-                <svg id="icon-lock-for-signup2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                  <path d="M5 15 L5 30 27 30 27 15 Z M9 15 C9 9 9 5 16 5 23 5 23 9 23 15 M16 20 L16 23" />
-                  <circle cx="16" cy="24" r="1" />
-                </svg>
-                <input id="sign-up-input-password" class="form-control input-field" placeholder="Password" type="password" name="credentials[password]">
-<br>
-                <input id="sign-up-input-confirm-password" class="form-control input-field" placeholder="Confirm Password" type="password" name="credentials[password_confirmation]">
-              </div>
-              <button id='btnSignUp' class="btn btn-dark">Sign Up</button>
-            </form>
-          </div>
+      <!-- ********** LOGIN PAGE ********** -->
+      <div class="login-in-page">
+        <!-- ********** SIGN IN FORM ********** -->
+        <div class="sign_in_div">
+          <form id="sign-in">
+            <h1>Help Desk Support</h1>
+            <svg id="icon-mail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+              <path d="M2 26 L30 26 30 6 2 6 Z M2 6 L16 16 30 6" />
+            </svg>
+            <div class="form-group">
+              <label for="Email"></label>
+              <input class="form-control" placeholder="Email" type="email" name="credentials[email]">
+            </div>
+            <svg id="icon-lock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+              <path d="M5 15 L5 30 27 30 27 15 Z M9 15 C9 9 9 5 16 5 23 5 23 9 23 15 M16 20 L16 23" />
+              <circle cx="16" cy="24" r="1" />
+            </svg>
+            <div class="form-group">
+              <label for="password"></label>
+              <input id='enter-password-input' class="form-control" placeholder="Password" type="password" name="credentials[password]">
+            </div>
+            <button id='btnSignIn' class="btn btn-dark">Sign In</button>
+          </form>
         </div>
-        <section class="ticketPage">
-          <!-- Ticket page -->
-          <h1 class="tickets-header">Tickets</h1>
-          <p>Welcome to our help desk support! Please fill out the following form with the following information: the type of computer you have, the model number of your computer, the date you are issuing the ticekt and a brief description of the
-            issue you are having.</p>
 
-          <br>
+        <p id="message"></p>
 
-          <div class="createTicket">
-            <h1 class="create-ticket-header">Create Ticket</h1>
-            <br>
-            <form id="create-ticket">
-              <input placeholder="date" type="text" name="ticket[date]">
+        <!-- ********** SIGN UP FORM ********** -->
+        <div class="sign_up_div">
+          <h2 class="sign-up-header">Sign Up</h2>
+          <form id="sign-up">
+            <svg id="icon-mail-for-signup" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+              <path d="M2 26 L30 26 30 6 2 6 Z M2 6 L16 16 30 6" />
+            </svg>
+            <div class="form-group">
+              <label for="Enter email"></label>
+              <input id="sign-up-input" class="form-control input-field" placeholder="Email" type="email" name="credentials[email]">
+            </div>
+            <svg id="icon-lock-for-signup" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+              <path d="M5 15 L5 30 27 30 27 15 Z M9 15 C9 9 9 5 16 5 23 5 23 9 23 15 M16 20 L16 23" />
+              <circle cx="16" cy="24" r="1" />
+            </svg>
+            <div class="form-group-passwords">
+              <label for="password"></label>
+              <svg id="icon-lock-for-signup2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M5 15 L5 30 27 30 27 15 Z M9 15 C9 9 9 5 16 5 23 5 23 9 23 15 M16 20 L16 23" />
+                <circle cx="16" cy="24" r="1" />
+              </svg>
+              <input id="sign-up-input-password" class="form-control input-field" placeholder="Password" type="password" name="credentials[password]">
               <br>
-              <input placeholder="type of pc" type="text" name="ticket[type_of_pc]">
-              <br>
-              <input placeholder="model number" type="text" name="ticket[model_number]">
-              <br>
-              <textarea placeholder="Tell us what issue you are experiencing in this box." rows="4" cols="50" name="ticket[description]">
-</textarea>
-              <br>
-              <button id="btnNewticket">Submit</button>
-            </form>
-          </div>
-
-          <br>
-
-          <div class="viewTickets">
-            <h1 class="view-all-tickets-header">View All Tickets</h1>
-            <br>
-            <form id="get-tickets">
-              <button class="get-tickets">View All Tickets</button>
-            </form>
-          </div>
-
-          <div id="ticket-display"></div>
-
-          <br>
-
-          <div class="updateTicket">
-            <h1 class="update-a-ticket-header">Update a Ticket</h1>
-            <br>
-            <form id="update-ticket">
-              <input placeholder="date" type="text" name="ticket[date]">
-              <br>
-              <input placeholder="id" type="text" name=ticket[id]>
-              <br>
-              <textarea placeholder="Tell us what new issue you are experiencing in this box." rows="4" cols="50" name="ticket[description]">
-</textarea>
-              <br>
-              <button>Update Ticket</button>
-            </form>
-          </div>
-
-          <br>
-
-          <div class="removeTicket">
-            <h1 class="remove-a-ticket-header">Remove a Ticket</h1>
-            <form id="delete-ticket">
-              <input placeholder="id" type="text" name=ticket[id]>
-              <br>
-              <button id="removeTicket">Remove a Ticket</button>
-            </form>
-          </div>
-
-
-          <div class="changePassword">
-            <h2 class="change-password-header">Change Password</h2>
-            <form id="change-password">
-              <input placeholder="Enter Old Password" type="password" name="passwords[old]">
-              <br>
-              <input placeholder="Enter New Password" type="password" name="passwords[new]">
-              <br>
-              <button id="btnChangePassword">Change Password</button>
-            </form>
-          </div>
-
-          <div class="signOut">
-            <form id="sign-out">
-              <!-- <button id='btnSignOut'>Sign Out</button> -->
-              <button id='btnSignOut' class="btn btn-dark">Sign Out</button>
-            </form>
-          </div>
-        </section>
-        <footer>
-          <p> &copy; 2019</p>
-        </footer>
+              <input id="sign-up-input-confirm-password" class="form-control input-field" placeholder="Confirm Password" type="password" name="credentials[password_confirmation]">
+            </div>
+            <button id='btnSignUp' class="btn btn-dark">Sign Up</button>
+          </form>
+        </div>
       </div>
+
+      <!-- ********** CHANGE PASSWORD FORM ********** -->
+      <div class="change_password_div">
+        <h2 class="change-password-header">Change Password</h2>
+        <form id="change-password">
+          <div class="form-group">
+            <label for="password"></label>
+            <!-- <svg id="icon-lock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+              <path d="M5 15 L5 30 27 30 27 15 Z M9 15 C9 9 9 5 16 5 23 5 23 9 23 15 M16 20 L16 23"/>
+              <circle cx="16" cy="24" r="1"/>
+            </svg> -->
+            <input id="" class="form-control input-field" placeholder="Password" type="password" name="passwords[old]">
+            <br>
+            <input id="" class="form-control input-field" placeholder="Confirm Password" type="password" name="passwrods[new]">
+          </div>
+          <br>
+          <button id="btn-change-password" class="btn btn-dark">Change Password</button>
+        </form>
+      </div>
+
+      <!-- ********** TICKET PAGE ********** -->
+      <section class="ticketPage">
+        <h1 class="tickets-header">Tickets</h1>
+        <p>Welcome to our help desk support! Please fill out the following form with the following information: the type of computer you have, the model number of your computer, the date you are issuing the ticekt and a brief description of the
+          issue you are having.</p>
+
+        <br>
+        <!-- ********** CREATE TICKET FORM ********** -->
+        <div class="createTicket">
+          <h1 class="create-ticket-header">Create Ticket</h1>
+          <br>
+          <form id="create-ticket">
+            <input placeholder="date" type="text" name="ticket[date]">
+            <br>
+            <input placeholder="type of pc" type="text" name="ticket[type_of_pc]">
+            <br>
+            <input placeholder="model number" type="text" name="ticket[model_number]">
+            <br>
+            <textarea placeholder="Tell us what issue you are experiencing in this box." rows="4" cols="50" name="ticket[description]">
+              </textarea>
+            <br>
+            <button id="btn-create-ticket" class="btn btn-dark">Submit</button>
+          </form>
+        </div>
+        <br>
+        <!-- ********** VIEW ALL TICKETS FORM ********** -->
+        <div class="viewTickets">
+          <h1 class="view-all-tickets-header">View All Tickets</h1>
+          <br>
+          <form id="get-tickets">
+            <button id="btn-get-tickets" class="btn btn-dark">View All Tickets</button>
+          </form>
+        </div>
+
+        <div id="ticket-display"></div>
+
+        <br>
+        <!-- ********** UPDATE TICKET FORM ********** -->
+        <div class="updateTicket">
+          <h1 class="update-a-ticket-header">Update a Ticket</h1>
+          <br>
+          <form id="update-ticket">
+            <input placeholder="date" type="text" name="ticket[date]">
+            <br>
+            <input placeholder="id" type="text" name=ticket[id]>
+            <br>
+            <textarea placeholder="Tell us what new issue you are experiencing in this box." rows="4" cols="50" name="ticket[description]">
+              </textarea>
+            <br>
+            <button id="btn-update-ticket" class="btn btn-dark">Update Ticket</button>
+          </form>
+        </div>
+
+        <br>
+        <!-- ********** REMOVE TICKET FORM ********** -->
+        <div class="removeTicket">
+          <h1 class="remove-a-ticket-header">Remove a Ticket</h1>
+          <form id="delete-ticket">
+            <input placeholder="id" type="text" name=ticket[id]>
+            <br>
+            <button id="btn-remove-ticket" class="btn btn-dark">Remove a Ticket</button>
+          </form>
+        </div>
+
+        <!-- ********** CHANGE PASSWORD FORM ********** -->
+        <!-- <div class="change_password_div">
+          <h2 class="change-password-header">Change Password</h2>
+          <form id="change-password">
+            <div class="form-group">
+              <label for="password"></label>
+              <svg id="icon-lock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M5 15 L5 30 27 30 27 15 Z M9 15 C9 9 9 5 16 5 23 5 23 9 23 15 M16 20 L16 23"/>
+                <circle cx="16" cy="24" r="1"/>
+              </svg>
+        <input id="" class="form-control input-field" placeholder="Password" type="password" name="passwords[old]">
+        <br>
+        <input id="" class="form-control input-field" placeholder="Confirm Password" type="password" name="passwrods[new]">
+    </div>
+    <br>
+    <button id="btn-change-password" class="btn btn-dark">Change Password</button>
+    </form>
+    </div> -->
+
+    <!-- ********** SIGN OUT FORM ********** -->
+    <div class="signOut">
+      <form id="sign-out">
+        <button id='btn-sign-out' class="btn btn-dark">Sign Out</button>
+      </form>
+    </div>
+    </section>
+    <footer>
+      <p> &copy; 2019</p>
+    </footer>
+    </div>
   </main>
 </body>
 

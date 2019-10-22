@@ -11,6 +11,7 @@ const ticketsEvents = require('./tickets/events')
 
 $(() => {
   // your JS code goes here
+  // FORMS
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)
@@ -25,15 +26,15 @@ $(() => {
     $('.sign_in_div').hide()
     $('.sign_up_div').hide()
     $('.ticketPage').show()
-    $('.changePassword').show()
+    $('.change_password_div').show()
     $('.signOut').show()
 
-    $('#btnSignOut').on('click', function (event) {
+    $('#btn-sign-out').on('click', function (event) {
+      $('.sign_in_div').show()
+      $('.sign_up_div').show()
       $('.ticketPage').hide()
       $('.changePassword').hide()
       $('.signOut').hide()
-      $('.signUp').show()
-      $('#sign-in').show()
     })
   })
 })

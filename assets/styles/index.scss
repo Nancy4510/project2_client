@@ -9,7 +9,6 @@
 body {
   font-family: 'Quicksand', sans-serif;
 }
-
 // .container {
 //   height: 400%;
 //   width: 900px;
@@ -25,19 +24,19 @@ main {
   overflow: hidden;
 }
 
+// ******SIGN IN SECTION****** //
+
 .sign_in_div {
   height: 100px;
-  // margin-bottom: 60px;
   width: 100%;
 }
 
 h1 {
   font-weight: 600;
-  font-size: 35px;
+  font-size: 39px;
   margin-right: 600px;
   margin-top: 15px;
   text-align: right;
-  // padding-left: 10px;
 }
 
 // SIGN IN FORM
@@ -46,11 +45,10 @@ h1 {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 500%;
-  margin-right: 10px;
+  margin-right: 30px;
 }
 
-
-#icon-mail{
+#icon-mail {
   margin-left: -400px;
   margin-top: 30px;
   padding-right: 10px;
@@ -92,6 +90,7 @@ h1 {
   color: white;
 }
 
+// ******SIGN UP SECTION****** //
 .sign_up_div {
   height: 400px;
   text-align: center;
@@ -121,16 +120,15 @@ h1 {
 }
 
 #icon-lock-for-signup {
-  margin: 0px 500px -50px 0px;
+  margin: 0 500px -50px 0;
 }
 
 #icon-lock-for-signup2 {
-  margin: 0px 500px -200px 0px;
+  margin: 0 500px -200px 0;
 }
 
 .input-field {
-  margin: auto;
-  margin: 0px 0px 10px 50px;
+  margin: 0 0 10px 50px;
 }
 
 #btnSignUp {
@@ -141,6 +139,117 @@ h1 {
 }
 
 #btnSignUp:hover {
+  background-color: #343a40;
+  color: white;
+}
+
+// CREATE TICKET FORM
+#btn-create-ticket {
+  background-color: Transparent;
+  border-radius: 5px;
+  color: black;
+  height: 25px;
+  width: 150px;
+}
+
+#btn-create-ticket:hover {
+  background-color: #343a40;
+  color: white;
+}
+
+// GET TICKET FORM
+#btn-get-tickets {
+  background-color: Transparent;
+  border-radius: 5px;
+  color: black;
+  height: 25px;
+  width: 150px;
+}
+
+#btn-get-tickets:hover {
+  background-color: #343a40;
+  color: white;
+}
+
+// UPDATE TICKET FORM
+#btn-update-ticket {
+  background-color: Transparent;
+  border-radius: 5px;
+  color: black;
+  height: 25px;
+  width: 150px;
+}
+
+#btn-update-ticket:hover {
+  background-color: #343a40;
+  color: white;
+}
+
+// REMOVE TICKET FORM
+#btn-remove-ticket {
+  background-color: Transparent;
+  border-radius: 5px;
+  color: black;
+  height: 25px;
+  width: 150px;
+}
+
+#btn-remove-ticket:hover {
+  background-color: #343a40;
+  color: white;
+}
+
+
+// ******CHANGE PASSWORD SECTION****** //
+
+.change_password_div {
+  height: 400px;
+  text-align: center;
+  width: 500px;
+  margin-top: 100px;
+  margin-left: 300px;
+}
+
+.change-password-header {
+  font-weight: 600;
+  font-size: 39px;
+  margin-right: 600px;
+  margin-top: 15px;
+  text-align: right;
+  margin-top: 30px;
+  margin-left: 95px;
+}
+
+// CHANGE PASSWORD FORM
+#change-password {
+  // align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  // margin-bottom: 500%;
+  // margin-right: 30px;
+}
+
+#btn-change-password {
+  background-color: Transparent;
+  border-radius: 5px;
+  color: black;
+  height: 25px;
+  width: 150px;
+}
+
+#btn-change-password:hover {
+  background-color: #343a40;
+  color: white;
+}
+
+#btn-sign-out {
+  background-color: Transparent;
+  border-radius: 5px;
+  color: black;
+  width: 100px;
+}
+
+#btn-sign-out:hover {
   background-color: #343a40;
   color: white;
 }
