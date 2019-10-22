@@ -32,6 +32,8 @@ For the second project, I am plannig on doing a tech support site where the user
 
 - One thing that I would like to add later on as well is being able to display one ticket to the user and not just all of them at once. I would also like to add a third API like displaying the weather or time to the user.
 
+# **API Repository**
+- Link to the API repo: [API Repository](https://github.com/Nancy4510/project2_api)
 
 # **Wireframe**
 Wireframe to Front-End
