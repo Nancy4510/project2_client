@@ -3,7 +3,6 @@
 
 * {
   box-sizing: content-box;
-  // overflow: scroll;
 }
 
 body {
@@ -20,6 +19,20 @@ main {
 
 .login-in-page {
   overflow: hidden;
+}
+
+#ticket-display {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.inputField {
+  border-radius: 5px;
+}
+
+textarea {
+  border-radius: 5px;
 }
 
 // ******SIGN IN SECTION****** //
@@ -152,29 +165,28 @@ span {
 .main-paragraph {
   font-size: 20px;
   line-height: 1.6;
-  // text-align: center;
 }
 
 .main-paragraph2 {
   font-size: 20px;
   line-height: 1.6;
-  // text-align: center;
   margin-top: -36px;
 }
 
 // ******CREATE TICKET SECTION****** //
 .create_ticket_div {
-  // margin-top: 30px;
-  // margin-left: 95px;
+  display: flex;
+  margin: 50px 600px 30px 0px;
 }
 
 .create-ticket-header {
-  margin-right: 420px;
+  margin: auto;
+  margin-right: 70px;
 }
 
 // CREATE TICKET FORM
 #create-ticket {
-  margin: 40px -10px 0px 50px;
+  margin: auto;
 }
 
 #btn-create-ticket {
@@ -182,6 +194,8 @@ span {
   border-radius: 5px;
   color: black;
   height: 25px;
+  margin-top: -60px;
+  margin-right: 620px;
   width: 150px;
 }
 
@@ -190,23 +204,24 @@ span {
   color: white;
 }
 
-// ******GET TICKET SECTION****** //
-
-// GET TICKET FORM
-#btn-get-tickets {
-  background-color: Transparent;
-  border-radius: 5px;
-  color: black;
-  height: 25px;
-  width: 150px;
-}
-
-#btn-get-tickets:hover {
-  background-color: #343a40;
-  color: white;
-}
-
 // ******UPDATE TICKET SECTION****** //
+.update_ticket_div {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0px 50px 0px 0px;
+  // margin-top: -300px;
+}
+
+.update-a-ticket-header {
+  margin: auto;
+  margin-top: -50px;
+  margin-right: 65px;
+}
+
+// UPDATE TICKET FORM
+#update-ticket {
+    margin: -300px 200px 0px 0px;
+}
 
 // UPDATE TICKET FORM
 #btn-update-ticket {
@@ -223,9 +238,45 @@ span {
   color: white;
 }
 
-// ******REMOVE TICKET SECTION****** //
+// ******GET TICKET SECTION****** //
+.view-all-tickets-header {
+    margin: auto;
+    margin-right: 575px;
+}
 
-// REMOVE TICKET FORM
+#ticket-display {
+  margin-top: 30px;
+}
+
+#btn-get-tickets {
+  background-color: Transparent;
+  border-radius: 5px;
+  color: black;
+  height: 25px;
+  margin-top: 20px;
+  width: 150px;
+}
+
+#btn-get-tickets:hover {
+  background-color: #343a40;
+  color: white;
+}
+
+// ******REMOVE TICKET SECTION****** //
+.remove_ticket_div {
+  margin-top: 50px;
+}
+
+.remove-a-ticket-header {
+  margin: auto;
+  margin-right: 575px;
+}
+
+.input-remove-ticket {
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
 #btn-remove-ticket {
   background-color: Transparent;
   border-radius: 5px;

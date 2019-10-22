@@ -19,17 +19,17 @@ const failureMessage = function (newText) {
 const onGetTicketSuccess = function (data) {
   // config.ticket = data.ticket
   // console.log(data)
-  $('.modal').html('')
+  $('#ticket-display').html('')
   data.tickets.forEach(ticket => {
     const ticketHTML = (`
           <h4>Date: ${ticket.date}</h4>
-          <p>Type of Pc: ${ticket.type_of_pc}</p>
-          <p>Model Number: ${ticket.model_number}<p>
-          <p>Description: ${ticket.description}<p>
-          <p>ID: ${ticket.id}</p>
+          <h4>Type of Pc: ${ticket.type_of_pc}</h4>
+          <h4>Model Number: ${ticket.model_number}</h4>
+          <h4>Description: ${ticket.description}<h4>
+          <h4>ID: ${ticket.id}</h4>
           <br>
         `)
-    $('.modal').append(ticketHTML)
+    $('#ticket-display').append(ticketHTML)
   })
 }
 // console.log('In onGetTicketSuccess')

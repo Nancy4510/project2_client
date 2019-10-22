@@ -20,6 +20,7 @@
     <div class="container">
       <!-- ********** LOGIN PAGE ********** -->
       <div class="login-in-page">
+
         <!-- ********** SIGN IN FORM ********** -->
         <div class="sign_in_div">
           <form id="sign-in">
@@ -82,74 +83,34 @@
         <p class="main-paragraph2">your computer please fill out the following form with the following information: the type of computer you have, the model number of
           your computer, the date you are creating the ticket and a brief description of the issue you are having. We will get back to you promptly!</p>
 
-        <br>
         <!-- ********** CREATE TICKET FORM ********** -->
         <div class="create_ticket_div">
           <form id="create-ticket">
             <h1 class="create-ticket-header">Create A Ticket</h1>
             <br>
-            <input placeholder="date" type="text" name="ticket[date]">
+            <input class="inputField" placeholder="Date" type="text" name="ticket[date]">
             <br>
-            <input placeholder="type of pc" type="text" name="ticket[type_of_pc]">
+            <input class="inputField" placeholder="Type Of PC" type="text" name="ticket[type_of_pc]">
             <br>
-            <input placeholder="model number" type="text" name="ticket[model_number]">
+            <input class="inputField" placeholder="Model Number" type="text" name="ticket[model_number]">
             <br>
             <textarea placeholder="Tell us what new issue you are experiencing in this box." rows="4" cols="50" name="ticket[description]">
               </textarea>
         </div>
         <br>
-        <button id="btn-create-ticket" class="btn btn-dark">Submit</button>
+        <button id="btn-create-ticket" class="btn btn-dark">Create Ticket</button>
         </form>
     </div>
-    <br>
-
-    <!-- ********** VIEW ALL TICKETS FORM ********** -->
-    <!-- <div class="viewTickets">
-      <h1 class="view-all-tickets-header">View All Tickets</h1>
-      <br>
-      <form id="get-tickets">
-        <button id="btn-get-tickets" class="btn btn-dark">View All Tickets</button>
-      </form>
-    </div>
-
-    <div id="ticket-display"></div> -->
-
-    <br>
-
-<form id ="get-tickets">
-    <button type="button" id="btn-get-tickets" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-  View All Tickets
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Here are your tickets</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <!-- <div id="ticket-display"></div> -->
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-</form>
 
     <!-- ********** UPDATE TICKET FORM ********** -->
-    <div class="updateTicket">
-      <h1 class="update-a-ticket-header">Update a Ticket</h1>
+    <div class="update_ticket_div">
       <br>
       <form id="update-ticket">
-        <input placeholder="date" type="text" name="ticket[date]">
+        <h1 class="update-a-ticket-header">Update a Ticket</h1>
         <br>
-        <input placeholder="id" type="text" name=ticket[id]>
+        <input class="inputField" placeholder="Date" type="text" name="ticket[date]">
+        <br>
+        <input class="inputField" placeholder="ID" type="text" name=ticket[id]>
         <br>
         <textarea placeholder="Tell us what new issue you are experiencing in this box." rows="4" cols="50" name="ticket[description]">
               </textarea>
@@ -158,12 +119,21 @@
       </form>
     </div>
 
-    <br>
+    <!-- ********** VIEW ALL TICKETS FORM ********** -->
+    <div class="view_tickets_div">
+      <br>
+      <form id="get-tickets">
+        <h1 class="view-all-tickets-header">View All Tickets</h1>
+        <button id="btn-get-tickets" class="btn btn-dark">View All Tickets</button>
+      </form>
+    </div>
+    <div id="ticket-display"></div>
+
     <!-- ********** REMOVE TICKET FORM ********** -->
-    <div class="removeTicket">
-      <h1 class="remove-a-ticket-header">Remove a Ticket</h1>
+    <div class="remove_ticket_div">
       <form id="delete-ticket">
-        <input placeholder="id" type="text" name=ticket[id]>
+        <h1 class="remove-a-ticket-header">Remove a Ticket</h1>
+        <input class="input-remove-ticket" placeholder="ID" type="text" name=ticket[id]>
         <br>
         <button id="btn-remove-ticket" class="btn btn-dark">Remove a Ticket</button>
       </form>
