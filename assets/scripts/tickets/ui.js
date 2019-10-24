@@ -17,9 +17,10 @@ const failureMessage = function (newText) {
 }
 
 const onGetTicketSuccess = function (data) {
+  // store.ticket = null
   // config.ticket = data.ticket
   // console.log(data)
-  // successMessage('View all tickets successfully!')
+  successMessage('Viewing all tickets successfully!')
   $('#ticket-display').html('')
   data.tickets.forEach(ticket => {
     const ticketHTML = (`

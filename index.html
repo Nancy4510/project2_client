@@ -30,7 +30,7 @@
             </svg>
             <div class="form-group">
               <label for="Email"></label>
-              <input id='enter-email-input' class="form-control" placeholder="Email" type="email" name="credentials[email]">
+              <input id='enter-email-input' class="form-control" placeholder="Email" type="email" name="credentials[email]" required>
             </div>
             <svg id="icon-lock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
               <path d="M5 15 L5 30 27 30 27 15 Z M9 15 C9 9 9 5 16 5 23 5 23 9 23 15 M16 20 L16 23" />
@@ -38,7 +38,7 @@
             </svg>
             <div class="form-group">
               <label for="password"></label>
-              <input id='enter-password-input' class="form-control" placeholder="Password" type="password" name="credentials[password]">
+              <input id='enter-password-input' class="form-control" placeholder="Password" type="password" name="credentials[password]" required>
             </div>
             <button id='btnSignIn' class="btn btn-dark">Sign In</button>
           </form>
@@ -55,7 +55,7 @@
             </svg>
             <div class="form-group">
               <label for="Enter email"></label>
-              <input id="sign-up-input" class="form-control input-field" placeholder="Email" type="email" name="credentials[email]">
+              <input id="sign-up-input" class="form-control input-field" placeholder="Email" type="email" name="credentials[email]" required>
             </div>
             <svg id="icon-lock-for-signup" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
               <path d="M5 15 L5 30 27 30 27 15 Z M9 15 C9 9 9 5 16 5 23 5 23 9 23 15 M16 20 L16 23" />
@@ -67,9 +67,9 @@
                 <path d="M5 15 L5 30 27 30 27 15 Z M9 15 C9 9 9 5 16 5 23 5 23 9 23 15 M16 20 L16 23" />
                 <circle cx="16" cy="24" r="1" />
               </svg>
-              <input id="sign-up-input-password" class="form-control input-field" placeholder="Password" type="password" name="credentials[password]">
+              <input id="sign-up-input-password" class="form-control input-field" placeholder="Password" type="password" name="credentials[password]" required>
               <br>
-              <input id="sign-up-input-confirm-password" class="form-control input-field" placeholder="Confirm Password" type="password" name="credentials[password_confirmation]">
+              <input id="sign-up-input-confirm-password" class="form-control input-field" placeholder="Confirm Password" type="password" name="credentials[password_confirmation]" required>
             </div>
             <button id='btnSignUp' class="btn btn-dark">Sign Up</button>
           </form>
@@ -88,13 +88,14 @@
           <form id="create-ticket">
             <h1 class="create-ticket-header">Create A Ticket</h1>
             <br>
-            <input class="inputField" placeholder="Date" type="text" name="ticket[date]">
+            <!-- <input class="inputField" placeholder="Date" type="text" name="ticket[date]"> -->
+            <input type="date" id="start" name="ticket[date]" min="01-01-2019" max="12-31-2020" required>
             <br>
-            <input class="inputField" placeholder="Type Of PC" type="text" name="ticket[type_of_pc]">
+            <input class="inputField" placeholder="Type Of PC" type="text" name="ticket[type_of_pc]" required>
             <br>
-            <input class="inputField" placeholder="Model Number" type="text" name="ticket[model_number]">
+            <input class="inputField" placeholder="Model Number" type="text" name="ticket[model_number]" required>
             <br>
-            <textarea placeholder="Tell us what new issue you are experiencing in this box." rows="4" cols="50" name="ticket[description]">
+            <textarea placeholder="Tell us what new issue you are experiencing in this box." rows="4" cols="50" name="ticket[description]" required>
               </textarea>
         </div>
         <br>
@@ -107,12 +108,15 @@
       <br>
       <form id="update-ticket">
         <h1 class="update-a-ticket-header">Update a Ticket</h1>
+        <input class="inputField" placeholder="ID" type="text" name=ticket[id] required>
         <br>
-        <input class="inputField" placeholder="Date" type="text" name="ticket[date]">
+        <input type="date" id="start" name="ticket[date]" min="01-01-2019" max="12-31-2020" required>
         <br>
-        <input class="inputField" placeholder="ID" type="text" name=ticket[id]>
+        <input class="inputField" placeholder="Type Of PC" type="text" name="ticket[type_of_pc]" required>
         <br>
-        <textarea placeholder="Tell us what new issue you are experiencing in this box." rows="4" cols="50" name="ticket[description]">
+        <input class="inputField" placeholder="Model Number" type="text" name="ticket[model_number]" required>
+        <br>
+        <textarea placeholder="Tell us what new issue you are experiencing in this box." rows="4" cols="50" name="ticket[description]" required>
               </textarea>
         <br>
         <button id="btn-update-ticket" class="btn btn-dark">Update Ticket</button>
@@ -124,7 +128,6 @@
       <br>
       <form id="get-tickets">
         <h1 class="view-all-tickets-header">View All Tickets</h1>
-
         <button id="btn-get-tickets" class="btn btn-dark">View All Tickets</button>
       </form>
     </div>
@@ -134,7 +137,7 @@
     <div class="remove_ticket_div">
       <form id="delete-ticket">
         <h1 class="remove-a-ticket-header">Remove a Ticket</h1>
-        <input class="input-remove-ticket" placeholder="ID" type="text" name=ticket[id]>
+        <input class="input-remove-ticket" placeholder="ID" type="text" name=ticket[id] required>
         <br>
         <button id="btn-remove-ticket" class="btn btn-dark">Remove a Ticket</button>
       </form>
