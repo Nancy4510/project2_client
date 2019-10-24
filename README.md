@@ -1,5 +1,3 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
-
 # **Project 2: Help Desk Support (client side)**
 
 This part of project 2 will be the client side.
@@ -34,6 +32,10 @@ For the second project, I am plannig on doing a tech support site where the user
 
 # **API Repository**
 - Link to the API repo: [API Repository](https://github.com/Nancy4510/project2_api)
+
+- Link to the deployed back-end [Deployed Back-End](https://peaceful-cove-13394.herokuapp.com)
+
+- Link to the deployed site: [Help Desk Support](https://nancy4510.github.io/project2_client/)
 
 # **Wireframe**
 Wireframe to Front-End
