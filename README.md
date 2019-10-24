@@ -33,7 +33,7 @@ For the second project, I am plannig on doing a tech support site where the user
 # **API Repository**
 - Link to the API repo: [API Repository](https://github.com/Nancy4510/project2_api)
 
-- Link to the deployed back-end [Deployed Back-End](https://peaceful-cove-13394.herokuapp.com)
+- Link to the deployed back-end: [Deployed Back-End](https://peaceful-cove-13394.herokuapp.com)
 
 - Link to the deployed site: [Help Desk Support](https://nancy4510.github.io/project2_client/)
 
