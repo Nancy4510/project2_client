@@ -17,13 +17,15 @@ const failureMessage = function (newText) {
 }
 
 const onGetTicketSuccess = function (data) {
-  // store.ticket = null
-  // config.ticket = data.ticket
-  // console.log(data)
-  successMessage('Viewing all tickets successfully!')
-  $('#ticket-display').html('')
-  data.tickets.forEach(ticket => {
-    const ticketHTML = (`
+  if (data.tickets.length === 0) {
+    $('#ticket-display').html('Please create a ticket first to view all your tickets')
+  } else {
+    // config.ticket = data.ticket
+    // console.log(data)
+    successMessage('Viewing all tickets successfully!')
+    $('#ticket-display').html('')
+    data.tickets.forEach(ticket => {
+      const ticketHTML = (`
           <h4>Date: ${ticket.date}</h4>
           <h4>Type of Pc: ${ticket.type_of_pc}</h4>
           <h4>Model Number: ${ticket.model_number}</h4>
@@ -31,8 +33,9 @@ const onGetTicketSuccess = function (data) {
           <h4>ID: ${ticket.id}</h4>
           <br>
         `)
-    $('#ticket-display').append(ticketHTML)
-  })
+      $('#ticket-display').append(ticketHTML)
+    })
+  }
 }
 // console.log('In onGetTicketSuccess')
 // successMessage('Get tickets success')
@@ -68,7 +71,7 @@ const onUpdateTicketFailure = function (responsedata) {
 
 const onDeleteTicketSuccess = function () {
   store.ticket = null
-  $('#ticket-display').html("Your ticket has been deleted! Click 'View All Tickets' to see the remaing ticket(s).")
+  $('#ticket-display').html("Your ticket has been deleted! Click 'View All Tickets' to see any remaing ticket(s).")
   successMessage('Deleted ticket successfully!')
   $('#delete-ticket').trigger('reset')
 }

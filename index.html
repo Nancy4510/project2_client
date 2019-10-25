@@ -143,6 +143,79 @@
       </form>
     </div>
 
+    <!-- ********** HARDWARE PAGE BEGINS ********** -->
+    <!-- ********** CREATE HARDWARE FORM ********** -->
+    <div class='create-harware-div'>
+      <form id="create-hardware">
+        <h1 class="create-hardware-header">Create Hardware</h1>
+        <div class="form-group">
+          <input type="date" id="start" name="hardware[date]" min="01-01-2019" max="12-31-2020" required>
+        </div>
+        <div class="form-group">
+          <input class="inputField" placeholder="Name Of Hardware" type="text" name="hardware[name_of_hardware]" required>
+        </div>
+        <div class="form-group">
+          <input class="inputField" placeholder="Processor Speed" type="text" name="hardware[processor_speed]" required>
+        </div>
+        <div class="form-group">
+          <input class="inputField" placeholder="Memory" type="text" name="hardware[memory]" required>
+        </div>
+        <div class="form-group">
+          <input class="inputField" placeholder="Serial Number" type="text" name="hardware[serial_number]" required>
+        </div>
+        <button type="submit" id="btn-create-hardware" class="btn btn-primary">Create Hardware</button>
+      </form>
+    </div>
+
+    <!-- ********** UPDATE HARDWARE FORM ********** -->
+    <div class='update-hardware-div'>
+      <form id="update-hardware">
+        <h1 class="create-hardware-header">Update Hardware</h1>
+        <div class="form-group">
+          <input class="inputField" placeholder="ID" type="text" name=hardware[id] required>
+        </div>
+        <div class="form-group">
+          <input type="date" id="start" name="hardware[date]" min="01-01-2019" max="12-31-2020" required>
+        </div>
+        <div class="form-group">
+          <input class="inputField" placeholder="Name Of Hardware" type="text" name="hardware[name_of_hardware]" required>
+        </div>
+        <div class="form-group">
+          <input class="inputField" placeholder="Processor Speed" type="text" name="hardware[processor_speed]" required>
+        </div>
+        <div class="form-group">
+          <input class="inputField" placeholder="Memory" type="text" name="hardware[memory]" required>
+        </div>
+        <div class="form-group">
+          <input class="inputField" placeholder="Serial Number" type="text" name="hardware[serial_number]" required>
+        </div>
+        <button type="submit" id="btn-update-hardware" class="btn btn-primary">Update Hardware</button>
+      </form>
+    </div>
+
+
+    <!-- ********** VIEW ALL HARDWARE FORM ********** -->
+    <div class="view-hardware-div">
+      <br>
+      <form id="get-hardware">
+        <h1 class="view-all-hardware-header">View All Hardware</h1>
+        <button id="btn-get-hardware" class="btn btn-dark">View All Hardware</button>
+      </form>
+    </div>
+    <div id="hardware-display"></div>
+
+
+    <!-- ********** REMOVE HARDWARE FORM ********** -->
+    <div class="remove-hardware-div">
+      <form id="delete-hardware">
+        <h1 class="remove-hardware-header">Remove a Hardware</h1>
+        <input class="input-remove-hardware" placeholder="ID" type="text" name=hardware[id] required>
+        <br>
+        <button id="btn-remove-hardware" class="btn btn-dark">Remove a Hardware</button>
+      </form>
+    </div>
+    <!-- ********** HARDWARE PAGE ENDS********** -->
+
     <!-- ********** CHANGE PASSWORD FORM ********** -->
     <div class="change_password_div">
       <h2 class="change-password-header">Change Password</h2>
