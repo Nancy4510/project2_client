@@ -8,6 +8,7 @@
 
 const authEvents = require('./auth/events')
 const ticketsEvents = require('./tickets/events')
+const hardwareEvents = require('./hardware/events')
 
 $(() => {
   // your JS code goes here
@@ -20,6 +21,10 @@ $(() => {
   $('#get-tickets').on('submit', ticketsEvents.onGetTickets)
   $('#update-ticket').on('submit', ticketsEvents.onUpdateTicket)
   $('#delete-ticket').on('submit', ticketsEvents.onDeleteTicket)
+  $('#create-hardware').on('submit', hardwareEvents.onCreateHardware)
+  $('#get-hardware').on('submit', hardwareEvents.onGetHardware)
+  $('#update-hardware').on('submit', hardwareEvents.onUpdateHardware)
+  $('#delete-hardware').on('submit', hardwareEvents.onDeleteHardware)
   $('.ticketPage').hide()
   $('.update_ticket_div').hide()
   $('.view_tickets_div').hide()
@@ -34,6 +39,7 @@ $(() => {
     $('.update_ticket_div').show()
     $('.view_tickets_div').show()
     $('#ticket-display').show()
+    $('#hardware-display').show()
     $('.remove_ticket_div').show()
     $('.change_password_div').show()
     $('.signOut').show()

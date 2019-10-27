@@ -4,41 +4,41 @@ const api = require('./api')
 const ui = require('./ui')
 // const store = require('../store')
 
-const onGetHardare = function () {
+const onGetHardware = function () {
   event.preventDefault()
-  api.getHardare()
-    .then(ui.onGetHardareSuccess)
-    .catch(ui.onGetHardareFailure)
+  api.getHardware()
+    .then(ui.onGetHardwareSuccess)
+    .catch(ui.onGetHardwareFailure)
 }
 
-const onCreateHardare = function (event) {
+const onCreateHardware = function (event) {
   const form = event.target
   event.preventDefault()
   const data = getFormFields(form)
-  api.createHardare(data)
-    .then(ui.onCreateHardareSuccess)
-    .catch(ui.onCreateHardareFailure)
+  api.createHardware(data)
+    .then(ui.onCreateHardwareSuccess)
+    .catch(ui.onCreateHardwareFailure)
 }
 
-const onUpdateHardare = function (event) {
+const onUpdateHardware = function (event) {
   event.preventDefault()
   const formData = getFormFields(event.target)
-  api.updateHardare(formData)
-    .then(ui.onUpdateHardareSuccess)
-    .catch(ui.onUpdateHardareFailure)
+  api.updateHardware(formData)
+    .then(ui.onUpdateHardwareSuccess)
+    .catch(ui.onUpdateHardwareFailure)
 }
 
-const onDeleteHardare = function (event) {
+const onDeleteHardware = function (event) {
   event.preventDefault()
   const formData = getFormFields(event.target)
-  api.deleteHardare(formData)
-    .then(ui.onDeleteHardareSuccess)
-    .catch(ui.onDeleteHardareFailure)
+  api.deleteHardware(formData)
+    .then(ui.onDeleteHardwareSuccess)
+    .catch(ui.onDeleteHardwareFailure)
 }
 
 module.exports = {
-  onGetHardare,
-  onCreateHardare,
-  onUpdateHardare,
-  onDeleteHardare
+  onGetHardware,
+  onCreateHardware,
+  onUpdateHardware,
+  onDeleteHardware
 }

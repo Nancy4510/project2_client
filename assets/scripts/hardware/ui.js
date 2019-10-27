@@ -17,32 +17,30 @@ const failureMessage = function (newText) {
 }
 
 const onGetHardwareSuccess = function (data) {
-  if (data.hardware.length === 0) {
-    $('#ticket-display').html('Please create a hardware first to view all your tickets')
+  if (data.hardwares.length === 0) {
+    $('#hardware-display').html('Please create a hardware first to view all your hardware')
   } else {
-    // config.ticket = data.ticket
-    // console.log(data)
     successMessage('Viewing all hardware successfully!')
     $('#hardware-display').html('')
-    data.hardware.forEach(ticket => {
+    data.hardwares.forEach(hardware => {
       const hardwareHTML = (`
-          <h4>Date: ${ticket.date}</h4>
-          <h4>Name of Hardware: ${ticket.type_of_pc}</h4>
-          <h4>Processor Speed: ${ticket.model_number}</h4>
-          <h4>Memory: ${ticket.description}<h4>
-          <h4>Serial Number: ${ticket.description}<h4>
-          <h4>ID: ${ticket.id}</h4>
+          <h4>Date: ${hardware.date}</h4>
+          <h4>Name of Hardware: ${hardware.type_of_pc}</h4>
+          <h4>Processor Speed: ${hardware.model_number}</h4>
+          <h4>Memory: ${hardware.description}<h4>
+          <h4>Serial Number: ${hardware.description}<h4>
+          <h4>ID: ${hardware.id}</h4>
           <br>
         `)
       $('#hardware-display').append(hardwareHTML)
     })
   }
 }
-// console.log('In onGetTicketSuccess')
-// successMessage('Get tickets success')
+// console.log('In onGetHardwareSuccess')
+// successMessage('Get hardware success')
 
 const onGetHardwareFailure = function () {
-  // console.log('In onGetTicketFailure')
+  // console.log('In onGetHardwareFailure')
   successMessage('Get hardware failed!')
 }
 const onCreateHardwareSuccess = function (data) {
@@ -60,7 +58,7 @@ const onCreateHardwareFailure = function (data) {
 const onUpdateHardwareSuccess = function (responseData) {
   store.hardware = responseData.hardware
   // console.log(store)
-  $('#ticket-display').html('Your hardware has been updated! Click "View All Hardware" to see the updated changes.')
+  $('#hardware-display').html('Your hardware has been updated! Click "View All Hardware" to see the updated changes.')
   successMessage('Updated hardware successfully!')
   $('form').trigger('reset')
 }
@@ -72,9 +70,9 @@ const onUpdateHardwareFailure = function (responsedata) {
 
 const onDeleteHardwareSuccess = function () {
   store.hardware = null
-  $('#ticket-display').html("Your hardware has been deleted! Click 'View All Hardware' to see any remaing hardware.")
+  $('#hardware-display').html("Your hardware has been deleted! Click 'View All Hardware' to see any remaing hardware.")
   successMessage('Deleted hardware successfully!')
-  $('#delete-ticket').trigger('reset')
+  $('#delete-hardware').trigger('reset')
 }
 
 const onDeleteHardwareFailure = function () {

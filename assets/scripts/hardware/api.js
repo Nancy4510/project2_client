@@ -4,10 +4,10 @@ const config = require('./../config')
 const store = require('../store')
 
 const getHardware = function () {
-  // make GET request to /tickets
-  // console.log('in getTicket')
+  // make GET request to /harwares
+  // console.log('in getHardware')
   return $.ajax({
-    url: config.apiUrl + '/hardware/',
+    url: config.apiUrl + '/hardwares/',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
@@ -16,10 +16,10 @@ const getHardware = function () {
 }
 
 const createHardware = function (data) {
-  // console.log('new ticket created')
+  // console.log('new hardware created')
   return $.ajax({
     method: 'POST',
-    url: config.apiUrl + '/hardware/',
+    url: config.apiUrl + '/hardwares/',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
@@ -28,9 +28,9 @@ const createHardware = function (data) {
 }
 
 const updateHardware = function (formData) {
-  // console.log('ticket updated')
+  // console.log('hardware updated')
   return $.ajax({
-    url: config.apiUrl + '/hardware/' + formData.hardware.id,
+    url: config.apiUrl + '/hardwares/' + formData.hardware.id,
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
@@ -39,18 +39,18 @@ const updateHardware = function (formData) {
   })
 }
 
-// const showTicket = function (formData) {
-//   // console.log('ticket shown')
+// const showHardware = function (formData) {
+//   // console.log('hardware shown')
 //   return $.ajax({
-//     url: config.apiUrl + '/tickets/' + formData.ticket.id,
+//     url: config.apiUrl + '/hardwares/' + formData.ticket.id,
 //     method: 'GET'
 //   })
 // }
 
 const deleteHardware = function (formData) {
-  // console.log('ticket deleted')
+  // console.log('hardware deleted')
   return $.ajax({
-    url: config.apiUrl + '/hardware/' + formData.hardware.id,
+    url: config.apiUrl + '/hardwares/' + formData.hardware.id,
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
@@ -63,6 +63,6 @@ module.exports = {
   getHardware,
   createHardware,
   updateHardware,
-  // showTicket,
+  // showHardware,
   deleteHardware
 }
