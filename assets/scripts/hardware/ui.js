@@ -25,10 +25,10 @@ const onGetHardwareSuccess = function (data) {
     data.hardwares.forEach(hardware => {
       const hardwareHTML = (`
           <h4>Date: ${hardware.date}</h4>
-          <h4>Name of Hardware: ${hardware.type_of_pc}</h4>
-          <h4>Processor Speed: ${hardware.model_number}</h4>
-          <h4>Memory: ${hardware.description}<h4>
-          <h4>Serial Number: ${hardware.description}<h4>
+          <h4>Name of Hardware: ${hardware.name_of_hardware}</h4>
+          <h4>Processor Speed: ${hardware.processor_speed}</h4>
+          <h4>Memory: ${hardware.memory}<h4>
+          <h4>Serial Number: ${hardware.serial_number}<h4>
           <h4>ID: ${hardware.id}</h4>
           <br>
         `)

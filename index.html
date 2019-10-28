@@ -88,7 +88,6 @@
           <form id="create-ticket">
             <h1 class="create-ticket-header">Create A Ticket</h1>
             <br>
-            <!-- <input class="inputField" placeholder="Date" type="text" name="ticket[date]"> -->
             <input type="date" id="start" name="ticket[date]" min="01-01-2019" max="12-31-2020" required>
             <br>
             <input class="inputField" placeholder="Type Of PC" type="text" name="ticket[type_of_pc]" required>
@@ -145,7 +144,10 @@
 
     <!-- ********** HARDWARE PAGE BEGINS ********** -->
     <!-- ********** CREATE HARDWARE FORM ********** -->
-    <div class='create-harware-div'>
+    <div class='create-hardware-div'>
+        <h1>Hardware Section</h1>
+        <p class="main-paragraph"><span>L</span>ooking to order some hardware for your computer and know the specifications, don't hesitate and order with us!</p>
+        <p class="main-paragraph2">Just fill out the following the form with name of the hardware, the processor speed, the memory and the serial number.</p>
       <form id="create-hardware">
         <h1 class="create-hardware-header">Create Hardware</h1>
         <div class="form-group">
@@ -163,7 +165,7 @@
         <div class="form-group">
           <input class="inputField" placeholder="Serial Number" type="text" name="hardware[serial_number]" required>
         </div>
-        <button type="submit" id="btn-create-hardware" class="btn btn-primary">Create Hardware</button>
+        <button type="submit" id="btn-create-hardware" class="btn btn-dark">Create Hardware</button>
       </form>
     </div>
 
@@ -189,7 +191,7 @@
         <div class="form-group">
           <input class="inputField" placeholder="Serial Number" type="text" name="hardware[serial_number]" required>
         </div>
-        <button type="submit" id="btn-update-hardware" class="btn btn-primary">Update Hardware</button>
+        <button type="submit" id="btn-update-hardware" class="btn btn-dark">Update Hardware</button>
       </form>
     </div>
 
@@ -202,6 +204,7 @@
         <button id="btn-get-hardware" class="btn btn-dark">View All Hardware</button>
       </form>
     </div>
+    <br>
     <div id="hardware-display"></div>
 
 

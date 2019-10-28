@@ -27,6 +27,12 @@ main {
   font-weight: bold;
 }
 
+#hardware-display {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+}
+
 .inputField {
   border-radius: 5px;
 }
@@ -310,6 +316,63 @@ span {
   color: white;
 }
 
+
+// ******HARDWARE BUTTONS****** //
+#btn-create-hardware {
+  background-color: Transparent;
+  border-radius: 5px;
+  color: black;
+  height: 25px;
+  margin-top: 20px;
+  width: 150px;
+}
+
+
+#btn-create-hardware:hover {
+  background-color: #343a40;
+  color: white;
+}
+
+#btn-update-hardware {
+  background-color: Transparent;
+  border-radius: 5px;
+  color: black;
+  height: 25px;
+  margin-top: 20px;
+  width: 150px;
+}
+
+#btn-update-hardware:hover {
+  background-color: #343a40;
+  color: white;
+}
+
+#btn-get-hardware {
+  background-color: Transparent;
+  border-radius: 5px;
+  color: black;
+  height: 25px;
+  margin-top: 20px;
+  width: 150px;
+}
+
+#btn-get-hardware:hover {
+  background-color: #343a40;
+  color: white;
+}
+
+#btn-remove-hardware {
+  background-color: Transparent;
+  border-radius: 5px;
+  color: black;
+  height: 25px;
+  margin-top: 20px;
+}
+
+#btn-remove-hardware:hover {
+  background-color: #343a40;
+  color: white;
+}
 
 // ******CHANGE PASSWORD SECTION****** //
 .change_password_div {
