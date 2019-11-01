@@ -46,6 +46,7 @@ const onGetHardwareFailure = function () {
 const onCreateHardwareSuccess = function (data) {
   store.hardware = data.hardware
   successMessage('Created hardware successfully!')
+  $('#hardware-display').html('To view your hardware you just created, just click "View All Hardware" to see your hardware.')
   $('form').trigger('reset')
 }
 
