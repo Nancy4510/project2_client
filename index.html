@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Help Desk Support</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
+</head>
+
+<body>
+  <main>
+
+    <div class="container">
+      <!-- ********** LOGIN PAGE ********** -->
+      <div class="login-in-page">
+
+        <!-- ********** SIGN IN FORM ********** -->
+        <div class="sign_in_div">
+          <form id="sign-in">
+            <h1 class="main-header">Help Desk Support</h1>
+            <svg id="icon-mail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+              <path d="M2 26 L30 26 30 6 2 6 Z M2 6 L16 16 30 6" />
+            </svg>
+            <div class="form-group">
+              <label for="Email"></label>
+              <input id='enter-email-input' class="form-control" placeholder="Email" type="email" name="credentials[email]" required>
+            </div>
+            <svg id="icon-lock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+              <path d="M5 15 L5 30 27 30 27 15 Z M9 15 C9 9 9 5 16 5 23 5 23 9 23 15 M16 20 L16 23" />
+              <circle cx="16" cy="24" r="1" />
+            </svg>
+            <div class="form-group">
+              <label for="password"></label>
+              <input id='enter-password-input' class="form-control" placeholder="Password" type="password" name="credentials[password]" required>
+            </div>
+            <button id='btnSignIn' class="btn btn-dark">Sign In</button>
+          </form>
+        </div>
+
+        <p id="message"></p>
+
+        <!-- ********** SIGN UP FORM ********** -->
+        <div class="sign_up_div">
+          <h2 class="sign-up-header">Sign Up</h2>
+          <form id="sign-up">
+            <svg id="icon-mail-for-signup" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+              <path d="M2 26 L30 26 30 6 2 6 Z M2 6 L16 16 30 6" />
+            </svg>
+            <div class="form-group">
+              <label for="Enter email"></label>
+              <input id="sign-up-input" class="form-control input-field" placeholder="Email" type="email" name="credentials[email]" required>
+            </div>
+            <svg id="icon-lock-for-signup" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+              <path d="M5 15 L5 30 27 30 27 15 Z M9 15 C9 9 9 5 16 5 23 5 23 9 23 15 M16 20 L16 23" />
+              <circle cx="16" cy="24" r="1" />
+            </svg>
+            <div class="form-group-passwords">
+              <label for="password"></label>
+              <svg id="icon-lock-for-signup2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M5 15 L5 30 27 30 27 15 Z M9 15 C9 9 9 5 16 5 23 5 23 9 23 15 M16 20 L16 23" />
+                <circle cx="16" cy="24" r="1" />
+              </svg>
+              <input id="sign-up-input-password" class="form-control input-field" placeholder="Password" type="password" name="credentials[password]" required>
+              <br>
+              <input id="sign-up-input-confirm-password" class="form-control input-field" placeholder="Confirm Password" type="password" name="credentials[password_confirmation]" required>
+            </div>
+            <button id='btnSignUp' class="btn btn-dark">Sign Up</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- ********** TICKET PAGE ********** -->
+      <section class="ticketPage">
+        <h1 class="tickets-header">Help Desk Support</h1>
+        <p class="main-paragraph"><span>W</span>elcome to our help desk support! If you are experiencing issues with</p>
+        <p class="main-paragraph2">your computer please fill out the following form with the following information: the type of computer you have, the model number of
+          your computer, the date you are creating the ticket and a brief description of the issue you are having. We will get back to you promptly!</p>
+
+        <!-- ********** CREATE TICKET FORM ********** -->
+        <div class="create_ticket_div">
+          <form id="create-ticket">
+            <h1 class="create-ticket-header">Create A Ticket</h1>
+            <br>
+            <input type="date" id="start" name="ticket[date]" min="01-01-2019" max="12-31-2020" required>
+            <br>
+            <input class="inputField" placeholder="Type Of PC" type="text" name="ticket[type_of_pc]" required>
+            <br>
+            <input class="inputField" placeholder="Model Number" type="text" name="ticket[model_number]" required>
+            <br>
+            <textarea placeholder="Tell us what new issue you are experiencing in this box." rows="4" cols="50" name="ticket[description]" required>
+              </textarea>
+        </div>
+        <br>
+        <button id="btn-create-ticket" class="btn btn-dark">Create Ticket</button>
+        </form>
+    </div>
+
+    <!-- ********** UPDATE TICKET FORM ********** -->
+    <div class="update_ticket_div">
+      <br>
+      <form id="update-ticket">
+        <h1 class="update-a-ticket-header">Update a Ticket</h1>
+        <input class="inputField" placeholder="ID" type="text" name=ticket[id] required>
+        <br>
+        <input type="date" id="start" name="ticket[date]" min="01-01-2019" max="12-31-2020" required>
+        <br>
+        <input class="inputField" placeholder="Type Of PC" type="text" name="ticket[type_of_pc]" required>
+        <br>
+        <input class="inputField" placeholder="Model Number" type="text" name="ticket[model_number]" required>
+        <br>
+        <textarea placeholder="Tell us what new issue you are experiencing in this box." rows="4" cols="50" name="ticket[description]" required>
+              </textarea>
+        <br>
+        <button id="btn-update-ticket" class="btn btn-dark">Update Ticket</button>
+      </form>
+    </div>
+
+    <!-- ********** VIEW ALL TICKETS FORM ********** -->
+    <div class="view_tickets_div">
+      <br>
+      <form id="get-tickets">
+        <h1 class="view-all-tickets-header">View All Tickets</h1>
+        <button id="btn-get-tickets" class="btn btn-dark">View All Tickets</button>
+      </form>
+    </div>
+    <div id="ticket-display"></div>
+
+    <!-- ********** REMOVE TICKET FORM ********** -->
+    <div class="remove_ticket_div">
+      <form id="delete-ticket">
+        <h1 class="remove-a-ticket-header">Remove a Ticket</h1>
+        <input class="input-remove-ticket" placeholder="ID" type="text" name=ticket[id] required>
+        <br>
+        <button id="btn-remove-ticket" class="btn btn-dark">Remove a Ticket</button>
+      </form>
+    </div>
+    <br>
+
+    <!-- ********** HARDWARE PAGE BEGINS ********** -->
+    <!-- ********** CREATE HARDWARE FORM ********** -->
+    <div class='create-hardware-div'>
+        <h1>Hardware Section</h1>
+        <p class="main-paragraph"><span>L</span>ooking to order some hardware for your computer and know the specifications, don't hesitate and order with us!</p>
+        <p class="main-paragraph2">Just fill out the following the form with name of the hardware, the processor speed, the memory and the serial number.</p>
+      <form id="create-hardware">
+        <h1 class="hardware-header">Create Hardware</h1>
+        <br>
+        <div class="form-group">
+          <input type="date" id="start" name="hardware[date]" min="01-01-2019" max="12-31-2020" required>
+        </div>
+        <div class="form-group">
+          <input class="inputField" placeholder="Name Of Hardware" type="text" name="hardware[name_of_hardware]" required>
+        </div>
+        <div class="form-group">
+          <input class="inputField" placeholder="Processor Speed" type="text" name="hardware[processor_speed]" required>
+        </div>
+        <div class="form-group">
+          <input class="inputField" placeholder="Memory" type="text" name="hardware[memory]" required>
+        </div>
+        <div class="form-group">
+          <input class="inputField" placeholder="Serial Number" type="text" name="hardware[serial_number]" required>
+        </div>
+        <button type="submit" id="btn-create-hardware" class="btn btn-dark">Create Hardware</button>
+        <br>
+        <div id="hardware-display1"></div>
+      </form>
+    </div>
+    <br>
+
+    <!-- ********** UPDATE HARDWARE FORM ********** -->
+    <div class='update-hardware-div'>
+      <form id="update-hardware">
+        <h1 class="hardware-header">Update Hardware</h1>
+        <br>
+        <div class="form-group">
+          <input class="inputField" placeholder="ID" type="text" name=hardware[id] required>
+        </div>
+        <div class="form-group">
+          <input type="date" id="start" name="hardware[date]" min="01-01-2019" max="12-31-2020" required>
+        </div>
+        <div class="form-group">
+          <input class="inputField" placeholder="Name Of Hardware" type="text" name="hardware[name_of_hardware]" required>
+        </div>
+        <div class="form-group">
+          <input class="inputField" placeholder="Processor Speed" type="text" name="hardware[processor_speed]" required>
+        </div>
+        <div class="form-group">
+          <input class="inputField" placeholder="Memory" type="text" name="hardware[memory]" required>
+        </div>
+        <div class="form-group">
+          <input class="inputField" placeholder="Serial Number" type="text" name="hardware[serial_number]" required>
+        </div>
+        <button type="submit" id="btn-update-hardware" class="btn btn-dark">Update Hardware</button>
+      </form>
+    </div>
+
+
+    <!-- ********** VIEW ALL HARDWARE FORM ********** -->
+    <div class="view-hardware-div">
+      <br>
+      <form id="get-hardware">
+        <h1 class="hardware-header">View All Hardware</h1>
+        <br>
+        <button id="btn-get-hardware" class="btn btn-dark">View All Hardware</button>
+      </form>
+    </div>
+    <br>
+    <div id="hardware-display"></div>
+
+
+    <!-- ********** REMOVE HARDWARE FORM ********** -->
+    <div class="remove-hardware-div">
+      <form id="delete-hardware">
+        <h1 class="hardware-header">Remove a Hardware</h1>
+        <br>
+        <input class="input-remove-hardware" placeholder="ID" type="text" name=hardware[id] required>
+        <br>
+        <button id="btn-remove-hardware" class="btn btn-dark">Remove a Hardware</button>
+      </form>
+    </div>
+    <!-- ********** HARDWARE PAGE ENDS********** -->
+
+    <!-- ********** CHANGE PASSWORD FORM ********** -->
+    <div class="change_password_div">
+      <h2 class="change-password-header">Change Password</h2>
+      <form id="change-password">
+        <div class="form-group">
+          <label for="password"></label>
+          <svg id="icon-lock-op" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <path d="M5 15 L5 30 27 30 27 15 Z M9 15 C9 9 9 5 16 5 23 5 23 9 23 15 M16 20 L16 23" />
+            <circle cx="16" cy="24" r="1" />
+          </svg>
+          <input id="old-pw-input" class="form-control input-field-op" placeholder="Old Password" type="password" name="passwords[old]">
+          <br>
+          <svg id="icon-lock-np" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <path d="M5 15 L5 30 27 30 27 15 Z M9 15 C9 9 9 5 16 5 23 5 23 9 23 15 M16 20 L16 23" />
+            <circle cx="16" cy="24" r="1" />
+          </svg>
+          <input id="new-pw-input" class="form-control input-field-np" placeholder="New Password" type="password" name="passwords[new]">
+        </div>
+        <br>
+        <button id="btn-change-password" class="btn btn-dark">Change Password</button>
+      </form>
+    </div>
+
+    <!-- ********** SIGN OUT FORM ********** -->
+    <div class="signOut">
+      <form id="sign-out">
+        <button id='btn-sign-out' class="btn btn-dark">Sign Out</button>
+      </form>
+    </div>
+    </section>
+    <footer>
+
+      <p> &copy; 2019</p>
+    </footer>
+    </div>
+  </main>
+</body>
+
+</html>
