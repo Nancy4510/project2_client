@@ -54,8 +54,6 @@ I created another resource called Hardware where the user can create a hardware 
 - I would like to make the app responsive where users can view it on thier phones with no issues. I would also like to have success messages display in a manner where they don't have to scroll all the way up to see if they created a resource successfully or not, if they were able to update it successfully or not, etc.
 
 # **API Repository**
-- Link to the client repo: [Client Repository](https://github.com/Nancy4510/project2_client)
-
 - Link to the API repo: [API Repository](https://github.com/Nancy4510/project2_api)
 
 - Link to the client repo: [Client Repository](https://github.com/Nancy4510/project2_client)
