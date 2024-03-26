@@ -35,7 +35,7 @@
     "grunt-webpack": "^3.0.2",
     "handlebars": "^4.0.11",
     "handlebars-loader": "^1.6.0",
-    "load-grunt-config": "^0.19.2",
+    "load-grunt-config": "^4.0.1",
     "node-libs-browser": "^2.1.0",
     "node-sass": "^4.7.2",
     "on-build-webpack": "^0.1.0",
